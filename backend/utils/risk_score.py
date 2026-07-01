@@ -4,7 +4,10 @@ Compute the Composite Risk Index (0–100) for each country-year record.
 """
 import numpy as np
 import pandas as pd
-
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import cross_val_score, StratifiedKFold
 
 # ── Indicator weights & direction ──────────────────────────────────────────────
 # direction = +1 means "higher value → higher risk"
@@ -71,6 +74,9 @@ def compute_risk_scores(df: pd.DataFrame) -> pd.DataFrame:
         df["risk_score"] = (weighted_sum / total_weight * 100).clip(0, 100).round(2)
     else:
         df["risk_score"] = 50.0
+        
+    # Create binary crisis target for ML (1 if risk score > 50, else 0)
+    df["crisis"] = (df["risk_score"] > 50).astype(int)
 
     # Map score → level + color
     def _classify(score):
@@ -98,3 +104,59 @@ def get_risk_level_from_score(score: float) -> tuple[str, str]:
         if lo <= score < hi:
             return label, color
     return "Extreme", "#dc2626"
+
+def run_ml_analysis(df: pd.DataFrame) -> dict:
+    features = [c for c in INDICATORS.keys() if c in df.columns]
+    
+    sub = df[features + ["crisis"]].dropna()
+    if sub.empty or len(sub["crisis"].unique()) < 2:
+        return {"lr_auc": 0, "rf_auc": 0, "ranking": []}
+        
+    X = sub[features]
+    y = sub["crisis"]
+    
+    scaler = StandardScaler()
+    X_sc = scaler.fit_transform(X)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    
+    # Logistic Regression
+    lr = LogisticRegression(max_iter=1000, class_weight="balanced", random_state=42)
+    lr_auc = cross_val_score(lr, X_sc, y, cv=cv, scoring="roc_auc").mean()
+    lr.fit(X_sc, y)
+    lr_coef = np.abs(lr.coef_[0])
+    
+    # Random Forest
+    rf = RandomForestClassifier(n_estimators=100, class_weight="balanced", random_state=42)
+    rf_auc = cross_val_score(rf, X, y, cv=cv, scoring="roc_auc").mean()
+    rf.fit(X, y)
+    rf_imp = rf.feature_importances_
+    
+    # Calculate composite score for ranking (normalized to 100)
+    rf_norm = (rf_imp / rf_imp.max()) * 100 if rf_imp.max() > 0 else np.zeros(len(features))
+    lr_norm = (lr_coef / lr_coef.max()) * 100 if lr_coef.max() > 0 else np.zeros(len(features))
+    
+    composite_score = (rf_norm * 0.6) + (lr_norm * 0.4)
+    
+    ranking = []
+    for i, feature in enumerate(features):
+        category = "Macroeconomic" if feature in ["inflation", "gdp_growth", "interest_rate", "currency_rate"] else \
+                   "Financial" if feature in ["government_debt", "current_account", "trade_imports", "liquidity"] else \
+                   "Geopolitical"
+                   
+        ranking.append({
+            "feature": feature.replace("_", " ").title(),
+            "category": category,
+            "rf_importance": round(float(rf_norm[i]), 2),
+            "lr_importance": round(float(lr_norm[i]), 2),
+            "composite_score": round(float(composite_score[i]), 2)
+        })
+        
+    ranking = sorted(ranking, key=lambda x: x["composite_score"], reverse=True)
+    for i, item in enumerate(ranking):
+        item["rank"] = i + 1
+        
+    return {
+        "lr_auc": round(float(lr_auc), 3),
+        "rf_auc": round(float(rf_auc), 3),
+        "ranking": ranking
+    }

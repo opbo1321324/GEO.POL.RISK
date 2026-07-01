@@ -9,7 +9,7 @@ import numpy as np
 # Adjust path so utils can be imported
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from utils.data_loader import load_all_data
-from utils.risk_score import compute_risk_scores
+from utils.risk_score import compute_risk_scores, run_ml_analysis
 
 app = FastAPI(title="EWS Backend API")
 
@@ -76,4 +76,6 @@ def get_country_analysis(country_name: str):
 def get_full_data():
     return df_risk.to_dict(orient="records")
 
-# ML endpoints can be added here...
+@app.get("/api/ml-analysis")
+def get_ml_analysis():
+    return run_ml_analysis(df_risk)
