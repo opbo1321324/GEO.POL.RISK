@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 import { NewsTicker } from "@/components/NewsTicker";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "EWS Dashboard",
@@ -19,10 +21,12 @@ export default function RootLayout({
         <NewsTicker />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
-          <main className="flex-1 overflow-y-auto p-8 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#020817] to-[#020817]">
-            <div className="max-w-7xl mx-auto space-y-8 pb-12">
+          <main className="flex-1 overflow-y-auto bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-[#020817] to-[#020817] flex flex-col relative">
+            <Header />
+            <div className="max-w-7xl mx-auto w-full p-8 flex-1">
               {children}
             </div>
+            <Footer />
           </main>
         </div>
       </body>
