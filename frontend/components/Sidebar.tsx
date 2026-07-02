@@ -22,8 +22,8 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col w-64 border-r border-slate-800 bg-[#060b19] h-screen sticky top-0 px-4 py-6">
-      <div className="flex items-center gap-3 mb-10 px-2">
+    <div className="flex flex-col w-64 border-r border-slate-800 bg-[#060b19] h-full overflow-y-auto px-4 py-6">
+      <div className="flex items-center gap-3 mb-10 px-2 shrink-0">
         <div className="bg-indigo-500/20 p-2 rounded-lg">
           <Globe2 className="w-6 h-6 text-indigo-400" />
         </div>
