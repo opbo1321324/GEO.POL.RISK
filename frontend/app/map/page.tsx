@@ -1,55 +1,20 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
+import { ComposableMap, Geographies, Geography, Sphere, Graticule, ZoomableGroup } from 'react-simple-maps';
 import { AlertCircle } from 'lucide-react';
-import dynamic from 'next/dynamic';
-
-// Dynamically import react-globe.gl to prevent SSR issues with WebGL
-const Globe = dynamic(() => import('react-globe.gl'), { 
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center h-full w-full">
-      <div className="animate-pulse flex flex-col items-center">
-        <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-        <p className="mt-4 text-slate-400 font-medium">Initializing 3D Globe Engine...</p>
-      </div>
-    </div>
-  )
-});
+import { scaleLinear } from 'd3-scale';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000';
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 export default function MapPage() {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [geoJson, setGeoJson] = useState<any>(null);
-  
-  // Dimensions for globe
-  const [globeSize, setGlobeSize] = useState({ width: 800, height: 600 });
+  const [tooltipContent, setTooltipContent] = useState('');
 
   useEffect(() => {
-    // Adjust size based on container
-    const handleResize = () => {
-      const container = document.getElementById('globe-container');
-      if (container) {
-        setGlobeSize({ width: container.clientWidth, height: container.clientHeight });
-      }
-    };
-    
-    // Slight delay to allow layout to settle
-    setTimeout(handleResize, 100);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    // Load GeoJSON for country polygons
-    fetch('https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
-      .then(res => res.json())
-      .then(setGeoJson);
-
-    // Load Risk Data
     fetch(`${API_URL}/api/map`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch map data');
@@ -65,89 +30,24 @@ export default function MapPage() {
       });
   }, []);
 
-  const getCountryColor = (feature: any) => {
-    const countryName = feature.properties.ADMIN;
-    // Map some common naming differences
-    const nameMap: any = {
-      "United States of America": "United States",
-      "People's Republic of China": "China",
-      "Russian Federation": "Russia",
-    };
-    
-    const searchName = nameMap[countryName] || countryName;
-    const countryData = data.find(d => d.country === searchName);
-    
-    if (!countryData) return 'rgba(30, 41, 59, 0.4)'; // Default slate color
-    
-    // Colors matching our RISK_LEVELS
-    if (countryData.risk_level === 'Extreme') return 'rgba(220, 38, 38, 0.8)'; // Red-600
-    if (countryData.risk_level === 'High') return 'rgba(239, 68, 68, 0.8)'; // Red-500
-    if (countryData.risk_level === 'Medium') return 'rgba(245, 158, 11, 0.8)'; // Amber-500
-    return 'rgba(16, 185, 129, 0.8)'; // Emerald-500
-  };
+  const colorScale = scaleLinear<string>()
+    .domain([0, 100])
+    .range(["#10b981", "#ef4444"]); // Emerald to Red
 
-  const getCountryAltitude = (feature: any) => {
-    const countryName = feature.properties.ADMIN;
+  const getCountryData = (geoName: string) => {
     const nameMap: any = {
       "United States of America": "United States",
       "Russian Federation": "Russia",
     };
-    const searchName = nameMap[countryName] || countryName;
-    const countryData = data.find(d => d.country === searchName);
-    
-    // Higher risk = slightly raised polygon
-    if (!countryData) return 0.01;
-    return 0.01 + (countryData.risk_score / 100) * 0.08;
-  };
-
-  const getTooltip = (feature: any) => {
-    const countryName = feature.properties.ADMIN;
-    const nameMap: any = {
-      "United States of America": "United States",
-      "Russian Federation": "Russia",
-    };
-    const searchName = nameMap[countryName] || countryName;
-    const countryData = data.find(d => d.country === searchName);
-    
-    if (!countryData) {
-      return `
-        <div style="background: rgba(15,23,42,0.9); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-          <div style="font-weight: bold; color: white; margin-bottom: 4px;">${searchName}</div>
-          <div style="color: #94a3b8; font-size: 12px;">No Data Available</div>
-        </div>
-      `;
-    }
-
-    return `
-      <div style="background: rgba(15,23,42,0.9); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); font-family: monospace; min-width: 200px;">
-        <div style="font-weight: bold; color: white; font-size: 14px; border-bottom: 1px solid #334155; padding-bottom: 6px; margin-bottom: 6px;">
-          ${searchName} <span style="float:right; color: ${countryData.risk_color};">${countryData.risk_level}</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-          <span style="color: #94a3b8;">COMPOSITE RISK</span>
-          <span style="color: white; font-weight: bold;">${countryData.risk_score.toFixed(1)}/100</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-          <span style="color: #94a3b8;">GDP GROWTH</span>
-          <span style="color: ${countryData.gdp_growth > 0 ? '#10b981' : '#ef4444'};">${countryData.gdp_growth.toFixed(1)}%</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-          <span style="color: #94a3b8;">INFLATION</span>
-          <span style="color: white;">${countryData.inflation.toFixed(1)}%</span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span style="color: #94a3b8;">FATALITIES</span>
-          <span style="color: ${countryData.fatalities > 1000 ? '#ef4444' : 'white'};">${countryData.fatalities.toLocaleString()}</span>
-        </div>
-      </div>
-    `;
+    const searchName = nameMap[geoName] || geoName;
+    return data.find(d => d.country === searchName);
   };
 
   if (error) {
     return (
       <div className="glass-panel p-8 text-center text-red-400">
         <AlertCircle className="w-12 h-12 mx-auto mb-4" />
-        <h3 className="text-lg font-bold">Globe Failed to Load</h3>
+        <h3 className="text-lg font-bold">Map Failed to Load</h3>
         <p className="text-sm mt-2">{error}</p>
       </div>
     );
@@ -158,7 +58,7 @@ export default function MapPage() {
       <div className="shrink-0 flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white mb-1">Global Risk Interface</h1>
-          <p className="text-slate-400">Interactive 3D visualization of the Composite Risk Index and Macroeconomic indicators.</p>
+          <p className="text-slate-400">Interactive orthographic projection of the Composite Risk Index.</p>
         </div>
         <div className="flex gap-4">
           <div className="flex items-center gap-2">
@@ -180,31 +80,65 @@ export default function MapPage() {
         </div>
       </div>
 
-      <div className="glass-panel flex-1 relative overflow-hidden flex" id="globe-container">
-        {(!geoJson || loading) ? (
-          <div className="flex items-center justify-center w-full h-full">
-             <div className="animate-pulse flex flex-col items-center">
-                <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-                <p className="mt-4 text-slate-400 font-medium">Calibrating Data & Rendering Polygons...</p>
-              </div>
+      <div className="glass-panel flex-1 relative overflow-hidden flex items-center justify-center">
+        {loading ? (
+          <div className="animate-pulse flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-4 text-slate-400 font-medium">Calibrating Projection...</p>
           </div>
         ) : (
-          <div className="absolute inset-0 cursor-move">
-            <Globe
-              width={globeSize.width}
-              height={globeSize.height}
-              globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-              backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-              polygonsData={geoJson.features}
-              polygonAltitude={getCountryAltitude}
-              polygonCapColor={getCountryColor}
-              polygonSideColor={() => 'rgba(0, 0, 0, 0.5)'}
-              polygonStrokeColor={() => '#111'}
-              polygonLabel={getTooltip}
-              polygonsTransitionDuration={300}
-              atmosphereColor="#6366f1"
-              atmosphereAltitude={0.15}
-            />
+          <div className="w-full h-full relative cursor-move">
+            <ComposableMap
+              projection="geoOrthographic"
+              projectionConfig={{
+                rotate: [-20, -20, 0],
+                scale: 250
+              }}
+              style={{ width: "100%", height: "100%" }}
+            >
+              <ZoomableGroup zoom={1}>
+                <Sphere stroke="rgba(99,102,241,0.2)" strokeWidth={2} fill="#060b19" id="sphere" />
+                <Graticule stroke="rgba(255,255,255,0.05)" strokeWidth={0.5} />
+                <Geographies geography={geoUrl}>
+                  {({ geographies }) =>
+                    geographies.map(geo => {
+                      const d = getCountryData(geo.properties.name);
+                      const color = d ? colorScale(d.risk_score) : "#1e293b";
+                      return (
+                        <Geography
+                          key={geo.rsmKey}
+                          geography={geo}
+                          fill={color}
+                          stroke="#0f172a"
+                          strokeWidth={0.5}
+                          onMouseEnter={() => {
+                            if (d) {
+                              setTooltipContent(
+                                `${geo.properties.name} — Risk: ${d.risk_score.toFixed(1)} | GDP: ${d.gdp_growth > 0 ? '+' : ''}${d.gdp_growth.toFixed(1)}% | Fatalities: ${d.fatalities}`
+                              );
+                            } else {
+                              setTooltipContent(`${geo.properties.name} — No Data`);
+                            }
+                          }}
+                          onMouseLeave={() => setTooltipContent("")}
+                          style={{
+                            default: { outline: "none", transition: "all 250ms" },
+                            hover: { fill: "#6366f1", outline: "none", cursor: "pointer", transition: "all 250ms" },
+                            pressed: { fill: "#4f46e5", outline: "none" }
+                          }}
+                        />
+                      );
+                    })
+                  }
+                </Geographies>
+              </ZoomableGroup>
+            </ComposableMap>
+
+            {tooltipContent && (
+              <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-[#0f172a]/90 backdrop-blur border border-indigo-500/50 px-6 py-3 rounded-full text-white font-mono text-sm tracking-wide shadow-[0_0_20px_rgba(99,102,241,0.3)] z-50 whitespace-nowrap pointer-events-none">
+                {tooltipContent}
+              </div>
+            )}
           </div>
         )}
         
@@ -212,7 +146,7 @@ export default function MapPage() {
         <div className="absolute bottom-6 right-6 pointer-events-none">
           <div className="bg-[#0f172a]/80 backdrop-blur border border-indigo-500/30 p-4 rounded-lg text-right">
             <div className="text-xs text-slate-400 font-bold tracking-widest uppercase mb-1">System Status</div>
-            <div className="text-sm text-indigo-400 font-mono">ORBITAL TRACKING ACTIVE</div>
+            <div className="text-sm text-indigo-400 font-mono">ORTHOGRAPHIC PROJECTION ACTIVE</div>
             <div className="text-xs text-slate-500 font-mono mt-1">DATA: IMF/ACLED 2024</div>
           </div>
         </div>
