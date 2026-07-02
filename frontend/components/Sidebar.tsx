@@ -54,13 +54,24 @@ export function Sidebar() {
         })}
       </nav>
       
-      <div className="mt-auto pt-4 border-t border-slate-800 px-2">
+      <div className="mt-auto pt-4 border-t border-slate-800 px-2 flex flex-col gap-4">
         <div className="flex items-center justify-between text-xs text-slate-500">
           <span>Status</span>
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
             Live
           </span>
+        </div>
+        
+        <div className="text-center pb-2">
+          <a 
+            href="https://www.linkedin.com/in/ailesh-sharma-4616553a3" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[0.7rem] text-slate-500 hover:text-indigo-400 font-medium tracking-wide transition-colors uppercase"
+          >
+            Made By Ailesh Sharma
+          </a>
         </div>
       </div>
     </div>
