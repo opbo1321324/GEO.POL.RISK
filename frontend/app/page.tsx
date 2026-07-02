@@ -51,9 +51,22 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight text-white mb-1">Global Overview</h1>
-        <p className="text-slate-400">Real-time risk metrics across {data.kpis.countries_covered} nations ({data.kpis.latest_year}).</p>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white mb-1">Global Overview</h1>
+          <p className="text-slate-400">Real-time risk metrics across {data.kpis.countries_covered} nations ({data.kpis.latest_year}).</p>
+        </div>
+        <div className="text-right">
+          <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Dashboard Created By</p>
+          <a 
+            href="https://www.linkedin.com/in/ailesh-sharma-4616553a3" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-lg font-black text-indigo-400 hover:text-indigo-300 transition-colors"
+          >
+            AILESH SHARMA
+          </a>
+        </div>
       </div>
 
       {/* KPI Cards */}
