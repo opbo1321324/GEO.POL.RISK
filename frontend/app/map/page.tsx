@@ -1,5 +1,5 @@
-'use client';
 // @ts-nocheck
+'use client';
 import { useEffect, useState, useRef } from 'react';
 import { ComposableMap, Geographies, Geography, Sphere, Graticule, ZoomableGroup } from 'react-simple-maps';
 import { AlertCircle } from 'lucide-react';
