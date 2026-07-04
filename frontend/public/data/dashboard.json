@@ -2,7 +2,8 @@
   "kpis": {
     "countries_covered": 197,
     "avg_risk": 50.728015831794416,
-    "high_risk_count": 105
+    "high_risk_count": 105,
+    "avg_inflation": 7.906557291666666
   },
   "top_riskiest": [
     {
@@ -64,6 +65,52 @@
       "country": "Moldova",
       "risk_score": 61.3526950827363,
       "risk_level": "HIGH"
+    }
+  ],
+  "trend": [
+    {
+      "year": 2015,
+      "risk_score": 50.28967356793701
+    },
+    {
+      "year": 2016,
+      "risk_score": 50.12290438064657
+    },
+    {
+      "year": 2017,
+      "risk_score": 50.25087930528206
+    },
+    {
+      "year": 2018,
+      "risk_score": 50.11056859578067
+    },
+    {
+      "year": 2019,
+      "risk_score": 50.15918364740886
+    },
+    {
+      "year": 2020,
+      "risk_score": 60.344353711280675
+    },
+    {
+      "year": 2021,
+      "risk_score": 47.1967382159454
+    },
+    {
+      "year": 2022,
+      "risk_score": 53.15129562420209
+    },
+    {
+      "year": 2023,
+      "risk_score": 53.04024405338436
+    },
+    {
+      "year": 2024,
+      "risk_score": 51.07538505649007
+    },
+    {
+      "year": 2025,
+      "risk_score": 50.728015831794416
     }
   ]
 }
