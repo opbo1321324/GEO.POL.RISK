@@ -128,7 +128,7 @@ COUNTRY_ISO = {
 def _generate_synthetic_data() -> pd.DataFrame:
     """Generate highly calibrated realistic data reflecting recent IMF and conflict metrics."""
     rng = np.random.default_rng(42)
-    years = list(range(2010, 2025))
+    years = list(range(2010, 2027))
     rows = []
     
     # Accurate ~2023 baseline macro profiles
@@ -158,8 +158,8 @@ def _generate_synthetic_data() -> pd.DataFrame:
     for country in G20_COUNTRIES:
         base = MACRO_BASELINES.get(country, {"gdp": 2.0, "debt": 60.0, "inf": 3.0, "int": 4.0, "fiscal": -3.0, "risk": 30})
         for year in years:
-            # Add minor historical variance leading up to baseline in 2024
-            time_variance = (2024 - year) * 0.1
+            # Add minor historical variance leading up to baseline in 2026
+            time_variance = (2026 - year) * 0.1
             
             # Special conflict fatalities calibration
             fatalities = 0
