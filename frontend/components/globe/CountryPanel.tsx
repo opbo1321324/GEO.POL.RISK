@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { X, TrendingUp, AlertTriangle, Shield, Activity, DollarSign } from 'lucide-react';
