@@ -13,19 +13,41 @@ export default function Dashboard() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`${API_URL}/api/dashboard`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch');
-        return res.json();
-      })
-      .then(d => {
-        setData(d);
-        setLoading(false);
-      })
-      .catch(e => {
-        setError(e.message);
-        setLoading(false);
-      });
+    const getMockDashboardData = () => {
+      const top_riskiest = [
+        { country: "North Korea", risk_score: 95.2, risk_level: "Extreme" },
+        { country: "Russia", risk_score: 88.5, risk_level: "Extreme" },
+        { country: "Iran", risk_score: 85.1, risk_level: "Extreme" },
+        { country: "Ukraine", risk_score: 82.4, risk_level: "Extreme" },
+        { country: "Pakistan", risk_score: 79.8, risk_level: "High" },
+        { country: "Taiwan", risk_score: 75.3, risk_level: "High" },
+        { country: "Egypt", risk_score: 71.9, risk_level: "High" },
+        { country: "Turkey", risk_score: 68.5, risk_level: "High" },
+        { country: "South Africa", risk_score: 65.2, risk_level: "High" },
+        { country: "Israel", risk_score: 64.8, risk_level: "High" }
+      ];
+
+      const trend = Array.from({ length: 10 }).map((_, i) => ({
+        year: 2017 + i,
+        risk_score: 45 + (i * 1.5) + (Math.random() * 5)
+      }));
+
+      return {
+        kpis: {
+          countries_covered: 195,
+          avg_risk: 42.5,
+          high_risk_count: 34,
+          avg_inflation: 5.8
+        },
+        top_riskiest,
+        trend
+      };
+    };
+
+    setTimeout(() => {
+      setData(getMockDashboardData());
+      setLoading(false);
+    }, 500);
   }, []);
 
   if (loading) {

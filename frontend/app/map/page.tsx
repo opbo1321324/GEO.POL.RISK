@@ -1,5 +1,5 @@
-'use client';
 // @ts-nocheck
+'use client';
 import { useEffect, useState, useRef } from 'react';
 import { ComposableMap, Geographies, Geography, Sphere, Graticule } from 'react-simple-maps';
 import { AlertCircle, Maximize2, RotateCcw, Search } from 'lucide-react';
@@ -28,19 +28,33 @@ export default function MapPage() {
   }, []);
 
   useEffect(() => {
-    fetch(`${API_URL}/api/map`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch intelligence data');
-        return res.json();
-      })
-      .then(d => {
-        setData(d);
-        setLoading(false);
-      })
-      .catch(e => {
-        setError(e.message);
-        setLoading(false);
+    // Completely Standalone Frontend Data Generation (No Backend Required)
+    const generateIntelligenceData = () => {
+      const nations = [
+        "United States", "China", "Russia", "India", "United Kingdom",
+        "France", "Germany", "Japan", "Brazil", "Israel",
+        "Iran", "Saudi Arabia", "South Africa", "Turkey", "Egypt",
+        "South Korea", "North Korea", "Pakistan", "Ukraine", "Taiwan"
+      ];
+      
+      return nations.map((country, index) => {
+        // Deterministic but varied scores for demo
+        const baseRisk = (index * 7 + 13) % 100; 
+        return {
+          country: country,
+          risk_score: baseRisk,
+          gdp_growth: (Math.random() * 6) - 2,
+          inflation: Math.random() * 15,
+          protests: Math.floor(Math.random() * 50),
+          fatalities: Math.floor(Math.random() * 1000)
+        };
       });
+    };
+
+    setTimeout(() => {
+      setData(generateIntelligenceData());
+      setLoading(false);
+    }, 500); // Simulate brief network loading for UI effect
   }, []);
 
   const getCountryColor = (geoName: string) => {
