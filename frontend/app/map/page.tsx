@@ -1,31 +1,28 @@
 // @ts-nocheck
 'use client';
-import { useEffect, useState, useRef } from 'react';
-import { ComposableMap, Geographies, Geography, Sphere, Graticule } from 'react-simple-maps';
-import { AlertCircle, Maximize2, RotateCcw, Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { AlertCircle, Maximize2, RotateCcw } from 'lucide-react';
 import { CountryPanel } from '@/components/globe/CountryPanel';
 import { Particles } from '@/components/Particles';
+import dynamic from 'next/dynamic';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000';
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+// Dynamically import the GlobeScene to prevent SSR issues with Three.js
+const GlobeScene = dynamic(() => import('@/components/globe/GlobeScene').then(mod => mod.GlobeScene), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="animate-pulse flex flex-col items-center">
+        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <p className="mt-4 text-slate-400 font-medium">Initializing WebGL Engine...</p>
+      </div>
+    </div>
+  )
+});
 
 export default function MapPage() {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [clickedCountry, setClickedCountry] = useState<any>(null);
-  const [rotation, setRotation] = useState(0);
-
-  // Auto-spin the globe
-  useEffect(() => {
-    let animationFrameId: number;
-    const rotate = () => {
-      setRotation((r) => (r + 0.3) % 360);
-      animationFrameId = requestAnimationFrame(rotate);
-    };
-    rotate();
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
 
   useEffect(() => {
     // Completely Standalone Frontend Data Generation (No Backend Required)
@@ -57,71 +54,15 @@ export default function MapPage() {
     }, 500); // Simulate brief network loading for UI effect
   }, []);
 
-  const getCountryColor = (geoName: string) => {
-    const countryData = data.find((d: any) => d.country === geoName);
-    if (!countryData) return '#1E293B'; // Slate 800 for no data
-    
-    const score = countryData.risk_score;
-    if (score <= 25) return '#00E676'; // Green
-    if (score <= 50) return '#FFC107'; // Yellow
-    if (score <= 75) return '#FF7043'; // Orange
-    return '#F44336'; // Red
-  };
-
-  if (error) {
-    return (
-      <div className="w-full h-full flex items-center justify-center bg-[#050816]">
-        <div className="glass-panel p-8 text-center text-red-400 border border-red-500/30">
-          <AlertCircle className="w-12 h-12 mx-auto mb-4" />
-          <h3 className="text-lg font-bold uppercase tracking-widest">Connection Interrupted</h3>
-          <p className="text-sm mt-2 opacity-80">{error}</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="fixed inset-0 w-full h-full bg-[#050816] text-slate-200 overflow-hidden font-sans">
       
       {/* Elegant Dot Particles */}
       <Particles />
 
-      {/* 3D SVG Globe */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pt-10">
-        <div className="w-full max-w-4xl opacity-90 drop-shadow-[0_0_35px_rgba(59,130,246,0.2)]">
-          <ComposableMap
-            projection="geoOrthographic"
-            projectionConfig={{
-              scale: 300,
-              rotate: [rotation, 0, 0],
-            }}
-          >
-            <Sphere stroke="#1E293B" strokeWidth={0.5} fill="#0B1224" />
-            <Graticule stroke="#1E293B" strokeWidth={0.5} />
-            <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const color = getCountryColor(geo.properties.name);
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill={color}
-                      stroke="#050816"
-                      strokeWidth={0.5}
-                      onClick={() => setClickedCountry({ properties: { NAME: geo.properties.name } })}
-                      style={{
-                        default: { outline: "none", transition: "all 250ms" },
-                        hover: { fill: "#3B82F6", outline: "none", cursor: "pointer", transition: "all 250ms" },
-                        pressed: { fill: "#2563EB", outline: "none" },
-                      }}
-                    />
-                  );
-                })
-              }
-            </Geographies>
-          </ComposableMap>
-        </div>
+      {/* 3D WebGL Globe */}
+      <div className="absolute inset-0 z-0">
+        {!loading && <GlobeScene data={data} setClickedCountry={setClickedCountry} />}
       </div>
 
       {/* Top HUD */}
@@ -163,21 +104,17 @@ export default function MapPage() {
         </div>
       </div>
 
-      {/* Floating Controls */}
+      {/* Floating Controls (Search removed as requested) */}
       <div className="absolute bottom-8 left-8 flex flex-col gap-4 pointer-events-auto z-10">
-        <div className="relative">
-          <input 
-            type="text" 
-            placeholder="Search country..." 
-            className="bg-[#0B1224]/80 border border-[rgba(255,255,255,0.08)] backdrop-blur-md text-white px-4 py-3 pl-11 rounded-xl w-64 focus:outline-none focus:border-blue-500 transition-colors font-mono text-sm"
-          />
-          <Search className="w-4 h-4 text-slate-400 absolute left-4 top-3.5" />
-        </div>
         <div className="flex gap-2">
-          <button className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
+          <button 
+            onClick={() => window.location.reload()}
+            className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
             <RotateCcw className="w-5 h-5 text-slate-400 group-hover:text-white" />
           </button>
-          <button className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
+          <button 
+            onClick={() => document.documentElement.requestFullscreen()}
+            className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
             <Maximize2 className="w-5 h-5 text-slate-400 group-hover:text-white" />
           </button>
         </div>
@@ -185,8 +122,8 @@ export default function MapPage() {
 
       {/* Right Slide-out Panel */}
       <CountryPanel 
-        country={clickedCountry?.properties?.NAME} 
-        data={data.find(d => d.country === clickedCountry?.properties?.NAME)} 
+        country={clickedCountry?.properties?.ADMIN || clickedCountry?.properties?.NAME} 
+        data={data.find(d => d.country === clickedCountry?.properties?.ADMIN || d.country === clickedCountry?.properties?.NAME)} 
         onClose={() => setClickedCountry(null)} 
       />
     </div>
