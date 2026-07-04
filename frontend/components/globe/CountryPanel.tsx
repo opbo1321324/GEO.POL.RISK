@@ -82,7 +82,7 @@ export function CountryPanel({ country, data, onClose }: { country: any, data: a
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-sm font-bold text-slate-300">Economic</span>
-                <span className="text-blue-400 font-mono text-sm">{data.gdp_growth > 0 ? '+' : ''}{data.gdp_growth.toFixed(1)}% GDP</span>
+                <span className="text-blue-400 font-mono text-sm">{(data.gdp_growth || 0) > 0 ? '+' : ''}{(data.gdp_growth || 0).toFixed(1)}% GDP</span>
               </div>
               <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-blue-500 h-1.5 rounded-full" style={{ width: '40%' }}></div></div>
             </div>
@@ -94,9 +94,9 @@ export function CountryPanel({ country, data, onClose }: { country: any, data: a
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-sm font-bold text-slate-300">Financial</span>
-                <span className="text-emerald-400 font-mono text-sm">{data.inflation.toFixed(1)}% Inf</span>
+                <span className="text-emerald-400 font-mono text-sm">{(data.inflation || 0).toFixed(1)}% Inf</span>
               </div>
-              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, data.inflation * 10)}%` }}></div></div>
+              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, (data.inflation || 0) * 10)}%` }}></div></div>
             </div>
           </div>
 
@@ -106,9 +106,9 @@ export function CountryPanel({ country, data, onClose }: { country: any, data: a
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-sm font-bold text-slate-300">Political</span>
-                <span className="text-amber-400 font-mono text-sm">{data.protests} Events</span>
+                <span className="text-amber-400 font-mono text-sm">{data.protests || data.conflict_events || 0} Events</span>
               </div>
-              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-amber-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, data.protests)}%` }}></div></div>
+              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-amber-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, data.protests || data.conflict_events || 0)}%` }}></div></div>
             </div>
           </div>
 
@@ -118,9 +118,9 @@ export function CountryPanel({ country, data, onClose }: { country: any, data: a
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
                 <span className="text-sm font-bold text-slate-300">Military</span>
-                <span className="text-red-400 font-mono text-sm">{data.fatalities} Fatalities</span>
+                <span className="text-red-400 font-mono text-sm">{data.fatalities || 0} Fatalities</span>
               </div>
-              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-red-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, data.fatalities / 10)}%` }}></div></div>
+              <div className="w-full bg-slate-800 rounded-full h-1.5"><div className="bg-red-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, (data.fatalities || 0) / 10)}%` }}></div></div>
             </div>
           </div>
 

@@ -26,7 +26,18 @@ export default function MapPage() {
   }, []);
 
   const getCountryColor = (geoName: string) => {
-    const countryData = data.find((d: any) => d.country === geoName);
+    // Map TopoJSON names to our dataset names
+    const nameMap: Record<string, string> = { 
+      "United States of America": "United States",
+      "Russian Federation": "Russia",
+      "United Kingdom": "United Kingdom",
+      "Dem. Rep. Congo": "DR Congo",
+      "Central African Rep.": "Central African Republic",
+      "S. Sudan": "South Sudan"
+    };
+    
+    const searchName = nameMap[geoName] || geoName;
+    const countryData = data.find((d: any) => d.country === searchName);
     if (!countryData) return '#1E293B'; // Slate 800 for no data
     
     const score = countryData.risk_score;
@@ -124,7 +135,17 @@ export default function MapPage() {
 
       <CountryPanel 
         country={clickedCountry?.properties?.NAME} 
-        data={data.find(d => d.country === clickedCountry?.properties?.NAME)} 
+        data={data.find(d => {
+          const nameMap: Record<string, string> = { 
+            "United States of America": "United States",
+            "Russian Federation": "Russia",
+            "Dem. Rep. Congo": "DR Congo",
+            "Central African Rep.": "Central African Republic",
+            "S. Sudan": "South Sudan"
+          };
+          const searchName = nameMap[clickedCountry?.properties?.NAME] || clickedCountry?.properties?.NAME;
+          return d.country === searchName;
+        })} 
         onClose={() => setClickedCountry(null)} 
       />
     </div>
