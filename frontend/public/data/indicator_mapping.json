@@ -1,0 +1,242 @@
+[
+  {
+    "dashboard_field": "GDP_Growth",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NGDP_RPCH",
+    "subject_descriptor": "Real GDP Growth",
+    "unit": "Percent",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Nominal_GDP",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NGDPD",
+    "subject_descriptor": "Gross domestic product, current prices",
+    "unit": "U.S. dollars",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "GDP_per_Capita",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NGDPDPC",
+    "subject_descriptor": "Gross domestic product per capita, current prices",
+    "unit": "U.S. dollars",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "GDP_Deflator",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NGDP_D",
+    "subject_descriptor": "Gross domestic product, deflator",
+    "unit": "Index",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Inflation_Avg",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "PCPI",
+    "subject_descriptor": "Inflation, average consumer prices",
+    "unit": "Index",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Inflation_Pct",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "PCPIPCH",
+    "subject_descriptor": "Inflation, average consumer prices",
+    "unit": "Percent change",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Current_Account_Pct",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "BCA_NGDPD",
+    "subject_descriptor": "Current account balance",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Current_Account_USD",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "BCA",
+    "subject_descriptor": "Current account balance",
+    "unit": "U.S. dollars",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Gross_National_Savings",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NGSD_NGDP",
+    "subject_descriptor": "Gross national savings",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Gross_Capital_Formation",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "NFI",
+    "subject_descriptor": "Gross capital formation",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Unemployment_Rate",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "LUR",
+    "subject_descriptor": "Unemployment rate",
+    "unit": "Percent of total labor force",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Population",
+    "category": "Economic_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "LP",
+    "subject_descriptor": "Population",
+    "unit": "Persons",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Govt_Gross_Debt",
+    "category": "Fiscal_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "GGXWDG_NGDP",
+    "subject_descriptor": "General government gross debt",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Govt_Net_Lending",
+    "category": "Fiscal_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "GGXCNL_NGDP",
+    "subject_descriptor": "General government net lending/borrowing",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Govt_Revenue",
+    "category": "Fiscal_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "GGR_NGDP",
+    "subject_descriptor": "General government revenue",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Govt_Expenditure",
+    "category": "Fiscal_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "GGX_NGDP",
+    "subject_descriptor": "General government total expenditure",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Primary_Balance",
+    "category": "Fiscal_Indicators",
+    "source": "IMF WEO",
+    "subject_code": "GGXONLB_NGDP",
+    "subject_descriptor": "General government primary net lending/borrowing",
+    "unit": "Percent of GDP",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Exports",
+    "category": "External_Sector",
+    "source": "IMF WEO",
+    "subject_code": "TX_RPCH",
+    "subject_descriptor": "Volume of exports of goods and services",
+    "unit": "Percent change",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Imports",
+    "category": "External_Sector",
+    "source": "IMF WEO",
+    "subject_code": "TM_RPCH",
+    "subject_descriptor": "Volume of imports of goods and services",
+    "unit": "Percent change",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Policy_Interest_Rate",
+    "category": "Financial_Indicators",
+    "source": "IMF Interest Rate",
+    "subject_code": "POLICY_RATE",
+    "subject_descriptor": "Policy Interest Rate",
+    "unit": "Percent",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Lending_Rate",
+    "category": "Financial_Indicators",
+    "source": "IMF Interest Rate",
+    "subject_code": "LENDING_RATE",
+    "subject_descriptor": "Lending Rate",
+    "unit": "Percent",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "FX_Reserves",
+    "category": "International_Liquidity",
+    "source": "IMF International Liquidity",
+    "subject_code": "FX_RESERVES",
+    "subject_descriptor": "Foreign Exchange Reserves",
+    "unit": "U.S. dollars",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Conflict_Events",
+    "category": "Geopolitical_Indicators",
+    "source": "ACLED",
+    "subject_code": "TOTAL_EVENTS",
+    "subject_descriptor": "Total Conflict Events",
+    "unit": "Count",
+    "countries": 195,
+    "years": "1980-2031"
+  },
+  {
+    "dashboard_field": "Fatalities",
+    "category": "Geopolitical_Indicators",
+    "source": "ACLED",
+    "subject_code": "TOTAL_FATALITIES",
+    "subject_descriptor": "Fatalities",
+    "unit": "Count",
+    "countries": 195,
+    "years": "1980-2031"
+  }
+]

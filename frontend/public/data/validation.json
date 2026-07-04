@@ -1,0 +1,33 @@
+{
+  "missing_iso": 0,
+  "total_records": 36871,
+  "unique_indicators": [
+    "GDP_Growth",
+    "Nominal_GDP",
+    "GDP_Deflator",
+    "GDP_per_Capita",
+    "Inflation_Avg",
+    "Inflation_Pct",
+    "Unemployment_Rate",
+    "Population",
+    "Govt_Revenue",
+    "Govt_Expenditure",
+    "Govt_Net_Lending",
+    "Govt_Gross_Debt",
+    "Gross_National_Savings",
+    "Imports",
+    "Exports",
+    "Primary_Balance",
+    "Current_Account_USD",
+    "Current_Account_Pct",
+    "Conflict_Events",
+    "Fatalities"
+  ],
+  "years_covered": [
+    2015,
+    2025
+  ],
+  "value_warnings": [
+    "Suspicious GDP Growth values found: 9 instances outside -30% to +30%."
+  ]
+}
