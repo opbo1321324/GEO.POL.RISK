@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#020817] text-slate-200;
+    @apply text-slate-200 bg-transparent;
   }
 }
 
