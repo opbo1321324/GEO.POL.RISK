@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { AlertCircle, TrendingUp, Globe2, Activity } from 'lucide-react';
+import { Particles } from '@/components/Particles';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000';
 
@@ -50,9 +51,11 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-500">
-      
-      {/* Premium Profile Card */}
+    <>
+      <Particles />
+      <div className="space-y-6 animate-in fade-in duration-500 relative z-10">
+        
+        {/* Premium Profile Card */}
       <div className="glass-panel p-6 border-l-4 border-l-indigo-500 mb-8 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
         <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
@@ -209,6 +212,7 @@ export default function Dashboard() {
           </a>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

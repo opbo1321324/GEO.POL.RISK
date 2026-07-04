@@ -96,7 +96,7 @@ def load_all_data() -> pd.DataFrame:
 
     # Ensure all expected numeric columns exist
     numeric_cols = [
-        "gdp_growth", "government_debt", "current_account", "inflation",
+        "gdp_growth", "government_debt", "fiscal_balance", "current_account", "inflation",
         "interest_rate", "currency_rate", "trade_imports", "liquidity",
         "conflict_events", "protests", "fatalities",
     ]
@@ -133,30 +133,30 @@ def _generate_synthetic_data() -> pd.DataFrame:
     
     # Accurate ~2023 baseline macro profiles
     MACRO_BASELINES = {
-        "United States":  {"gdp": 2.5, "debt": 123.0, "inf": 3.4, "int": 5.5, "risk": 20},
-        "China":          {"gdp": 5.2, "debt": 83.0,  "inf": 0.2, "int": 3.4, "risk": 35},
-        "Japan":          {"gdp": 1.9, "debt": 255.0, "inf": 3.2, "int": 0.1, "risk": 15},
-        "Germany":        {"gdp": -0.3, "debt": 66.0, "inf": 5.9, "int": 4.5, "risk": 22},
-        "India":          {"gdp": 7.8, "debt": 82.0,  "inf": 5.5, "int": 6.5, "risk": 40},
-        "United Kingdom": {"gdp": 0.1, "debt": 104.0, "inf": 7.3, "int": 5.2, "risk": 25},
-        "France":         {"gdp": 0.9, "debt": 110.0, "inf": 4.9, "int": 4.5, "risk": 24},
-        "Italy":          {"gdp": 0.7, "debt": 137.0, "inf": 5.7, "int": 4.5, "risk": 30},
-        "Brazil":         {"gdp": 2.9, "debt": 88.0,  "inf": 4.6, "int": 11.2, "risk": 45},
-        "Canada":         {"gdp": 1.1, "debt": 106.0, "inf": 3.9, "int": 5.0, "risk": 18},
-        "Russia":         {"gdp": 3.0, "debt": 21.0,  "inf": 5.3, "int": 16.0, "risk": 85}, # High risk due to conflict
-        "South Korea":    {"gdp": 1.4, "debt": 54.0,  "inf": 3.6, "int": 3.5, "risk": 20},
-        "Australia":      {"gdp": 1.8, "debt": 55.0,  "inf": 5.6, "int": 4.3, "risk": 15},
-        "Mexico":         {"gdp": 3.2, "debt": 53.0,  "inf": 5.5, "int": 11.2, "risk": 42},
-        "Indonesia":      {"gdp": 5.0, "debt": 39.0,  "inf": 3.7, "int": 6.0, "risk": 38},
-        "Saudi Arabia":   {"gdp": -0.9, "debt": 24.0, "inf": 2.3, "int": 6.0, "risk": 30},
-        "Turkey":         {"gdp": 4.5, "debt": 33.0,  "inf": 65.0, "int": 45.0, "risk": 75}, # Economic extreme
-        "Argentina":      {"gdp": -1.6, "debt": 89.0, "inf": 211.0, "int": 100.0, "risk": 90}, # Economic crisis
-        "South Africa":   {"gdp": 0.6, "debt": 73.0,  "inf": 6.0, "int": 8.2, "risk": 55},
-        "European Union": {"gdp": 0.5, "debt": 90.0,  "inf": 5.4, "int": 4.5, "risk": 22},
+        "United States":  {"gdp": 2.5, "debt": 123.0, "inf": 3.4, "int": 5.5, "fiscal": -6.5, "risk": 20},
+        "China":          {"gdp": 5.2, "debt": 83.0,  "inf": 0.2, "int": 3.4, "fiscal": -7.1, "risk": 35},
+        "Japan":          {"gdp": 1.9, "debt": 255.0, "inf": 3.2, "int": 0.1, "fiscal": -5.2, "risk": 15},
+        "Germany":        {"gdp": -0.3, "debt": 66.0, "inf": 5.9, "int": 4.5, "fiscal": -2.0, "risk": 22},
+        "India":          {"gdp": 7.8, "debt": 82.0,  "inf": 5.5, "int": 6.5, "fiscal": -8.5, "risk": 40},
+        "United Kingdom": {"gdp": 0.1, "debt": 104.0, "inf": 7.3, "int": 5.2, "fiscal": -4.5, "risk": 25},
+        "France":         {"gdp": 0.9, "debt": 110.0, "inf": 4.9, "int": 4.5, "fiscal": -4.9, "risk": 24},
+        "Italy":          {"gdp": 0.7, "debt": 137.0, "inf": 5.7, "int": 4.5, "fiscal": -5.3, "risk": 30},
+        "Brazil":         {"gdp": 2.9, "debt": 88.0,  "inf": 4.6, "int": 11.2, "fiscal": -7.5, "risk": 45},
+        "Canada":         {"gdp": 1.1, "debt": 106.0, "inf": 3.9, "int": 5.0, "fiscal": -1.2, "risk": 18},
+        "Russia":         {"gdp": 3.0, "debt": 21.0,  "inf": 5.3, "int": 16.0, "fiscal": -2.5, "risk": 85}, 
+        "South Korea":    {"gdp": 1.4, "debt": 54.0,  "inf": 3.6, "int": 3.5, "fiscal": -1.8, "risk": 20},
+        "Australia":      {"gdp": 1.8, "debt": 55.0,  "inf": 5.6, "int": 4.3, "fiscal": -1.5, "risk": 15},
+        "Mexico":         {"gdp": 3.2, "debt": 53.0,  "inf": 5.5, "int": 11.2, "fiscal": -3.3, "risk": 42},
+        "Indonesia":      {"gdp": 5.0, "debt": 39.0,  "inf": 3.7, "int": 6.0, "fiscal": -2.4, "risk": 38},
+        "Saudi Arabia":   {"gdp": -0.9, "debt": 24.0, "inf": 2.3, "int": 6.0, "fiscal": 1.2, "risk": 30},
+        "Turkey":         {"gdp": 4.5, "debt": 33.0,  "inf": 65.0, "int": 45.0, "fiscal": -5.5, "risk": 75}, 
+        "Argentina":      {"gdp": -1.6, "debt": 89.0, "inf": 211.0, "int": 100.0, "fiscal": -4.0, "risk": 90}, 
+        "South Africa":   {"gdp": 0.6, "debt": 73.0,  "inf": 6.0, "int": 8.2, "fiscal": -5.0, "risk": 55},
+        "European Union": {"gdp": 0.5, "debt": 90.0,  "inf": 5.4, "int": 4.5, "fiscal": -3.4, "risk": 22},
     }
 
     for country in G20_COUNTRIES:
-        base = MACRO_BASELINES.get(country, {"gdp": 2.0, "debt": 60.0, "inf": 3.0, "int": 4.0, "risk": 30})
+        base = MACRO_BASELINES.get(country, {"gdp": 2.0, "debt": 60.0, "inf": 3.0, "int": 4.0, "fiscal": -3.0, "risk": 30})
         for year in years:
             # Add minor historical variance leading up to baseline in 2024
             time_variance = (2024 - year) * 0.1
@@ -176,6 +176,7 @@ def _generate_synthetic_data() -> pd.DataFrame:
                 "year":            year,
                 "gdp_growth":      base["gdp"] + rng.normal(0, 0.5) - time_variance,
                 "government_debt": base["debt"] + rng.normal(0, 2.0) - (time_variance * 5),
+                "fiscal_balance":  base["fiscal"] + rng.normal(0, 0.5),
                 "current_account": rng.normal(-1, 2),
                 "inflation":       max(0, base["inf"] + rng.normal(0, 1.0) - time_variance),
                 "interest_rate":   max(0, base["int"] + rng.normal(0, 0.5) - (time_variance * 0.5)),
