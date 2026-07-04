@@ -1,68 +1,68 @@
 {
   "kpis": {
-    "countries_covered": 225,
-    "avg_risk": 50.633709780433705,
+    "countries_covered": 197,
+    "avg_risk": 50.728015831794416,
     "high_risk_count": 105
   },
   "top_riskiest": [
     {
       "iso": "HTI",
       "country": "HTI",
-      "risk_score": 70.42315964445456,
+      "risk_score": 70.24881868094712,
       "risk_level": "HIGH"
     },
     {
       "iso": "MMR",
       "country": "MMR",
-      "risk_score": 70.28684092588246,
+      "risk_score": 70.11529858939377,
       "risk_level": "HIGH"
     },
     {
       "iso": "YEM",
       "country": "YEM",
-      "risk_score": 70.07354113073986,
+      "risk_score": 69.9071575964139,
       "risk_level": "HIGH"
     },
     {
       "iso": "MWI",
       "country": "MWI",
-      "risk_score": 65.40899475350552,
+      "risk_score": 65.32236368181489,
       "risk_level": "HIGH"
     },
     {
       "iso": "UKR",
       "country": "UKR",
-      "risk_score": 65.35923963513217,
+      "risk_score": 65.1241997613416,
       "risk_level": "HIGH"
     },
     {
       "iso": "BOL",
       "country": "BOL",
-      "risk_score": 64.69491605621805,
+      "risk_score": 64.61687082013285,
       "risk_level": "HIGH"
     },
     {
       "iso": "IRN",
       "country": "IRN",
-      "risk_score": 63.25671330842442,
+      "risk_score": 63.201513237624866,
       "risk_level": "HIGH"
     },
     {
       "iso": "VEN",
       "country": "VEN",
-      "risk_score": 62.88092977735087,
-      "risk_level": "HIGH"
-    },
-    {
-      "iso": "MDA",
-      "country": "MDA",
-      "risk_score": 61.53270383346828,
+      "risk_score": 62.831453925916634,
       "risk_level": "HIGH"
     },
     {
       "iso": "SUR",
       "country": "SUR",
-      "risk_score": 61.51246057364148,
+      "risk_score": 61.41482223427309,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "MDA",
+      "country": "MDA",
+      "risk_score": 61.3526950827363,
       "risk_level": "HIGH"
     }
   ]

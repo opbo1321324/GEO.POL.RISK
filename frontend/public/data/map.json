@@ -1,1322 +1,1154 @@
 [
   {
-    "iso_alpha3": "0",
-    "country": "0",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "100",
-    "country": "100",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "112",
-    "country": "112",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "191",
-    "country": "191",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "196",
-    "country": "196",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "203",
-    "country": "203",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "208",
-    "country": "208",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "246",
-    "country": "246",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "250",
-    "country": "250",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "276",
-    "country": "276",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "300",
-    "country": "300",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "348",
-    "country": "348",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "372",
-    "country": "372",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "380",
-    "country": "380",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "40",
-    "country": "40",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "440",
-    "country": "440",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "528",
-    "country": "528",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "56",
-    "country": "56",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "578",
-    "country": "578",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "616",
-    "country": "616",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "642",
-    "country": "642",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "643",
-    "country": "643",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "688",
-    "country": "688",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "724",
-    "country": "724",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "752",
-    "country": "752",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "756",
-    "country": "756",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "8",
-    "country": "8",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "804",
-    "country": "804",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
-    "iso_alpha3": "826",
-    "country": "826",
-    "risk_score": 50.0,
-    "risk_level": "MEDIUM"
-  },
-  {
     "iso_alpha3": "ABW",
     "country": "ABW",
-    "risk_score": 46.14932354081748,
+    "risk_score": 46.2063018711717,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "AGO",
     "country": "AGO",
-    "risk_score": 60.906076758416454,
+    "risk_score": 60.890275457174894,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ALB",
     "country": "ALB",
-    "risk_score": 48.59716379763039,
+    "risk_score": 48.61892353889424,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "AND",
     "country": "AND",
-    "risk_score": 45.598725830515754,
+    "risk_score": 45.666416081971455,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ARE",
     "country": "ARE",
-    "risk_score": 41.32737531475212,
+    "risk_score": 41.46569217085149,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ARG",
     "country": "ARG",
-    "risk_score": 57.21678291315536,
+    "risk_score": 57.262989082078946,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ARM",
     "country": "ARM",
-    "risk_score": 47.69871363907982,
+    "risk_score": 47.73796703294066,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ATG",
     "country": "ATG",
-    "risk_score": 53.660458619368214,
+    "risk_score": 53.601911777338145,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AUS",
     "country": "AUS",
-    "risk_score": 51.53631085233877,
+    "risk_score": 51.509501731243724,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AUT",
     "country": "AUT",
-    "risk_score": 54.34430064062433,
+    "risk_score": 54.271715987965976,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AZE",
     "country": "AZE",
-    "risk_score": 50.98160321974501,
+    "risk_score": 50.968611308344535,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BDI",
     "country": "BDI",
-    "risk_score": 58.79541157819128,
+    "risk_score": 58.816521978392394,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BEL",
     "country": "BEL",
-    "risk_score": 52.61483960456586,
+    "risk_score": 52.569822854192076,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BEN",
     "country": "BEN",
-    "risk_score": 42.66394281884383,
+    "risk_score": 42.7850402433996,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BFA",
     "country": "BFA",
-    "risk_score": 46.27035358570501,
+    "risk_score": 46.32890672986584,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BGD",
     "country": "BGD",
-    "risk_score": 55.20126136587932,
+    "risk_score": 55.1270353648478,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BGR",
     "country": "BGR",
-    "risk_score": 50.923225967649664,
+    "risk_score": 50.90909012344837,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BHR",
     "country": "BHR",
-    "risk_score": 45.89697704882889,
+    "risk_score": 45.958718789412515,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BHS",
     "country": "BHS",
-    "risk_score": 50.16318739505289,
+    "risk_score": 50.15653098292126,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BIH",
     "country": "BIH",
-    "risk_score": 52.460753599933106,
+    "risk_score": 52.421660041584246,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BLR",
     "country": "BLR",
-    "risk_score": 55.55693782444542,
+    "risk_score": 55.471461469903176,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BLZ",
     "country": "BLZ",
-    "risk_score": 50.87068674171167,
+    "risk_score": 50.85272505078815,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BOL",
     "country": "BOL",
-    "risk_score": 64.69491605621805,
+    "risk_score": 64.61687082013285,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRA",
     "country": "BRA",
-    "risk_score": 53.33032059891262,
+    "risk_score": 53.27868366800852,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRB",
     "country": "BRB",
-    "risk_score": 50.778190258542246,
+    "risk_score": 50.76440545817313,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRN",
     "country": "BRN",
-    "risk_score": 44.5341406100274,
+    "risk_score": 44.615943124438154,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BTN",
     "country": "BTN",
-    "risk_score": 46.39339177426299,
+    "risk_score": 46.45539183826124,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BWA",
     "country": "BWA",
-    "risk_score": 58.65051893427546,
+    "risk_score": 58.50781144315275,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CAF",
     "country": "CAF",
-    "risk_score": 52.829935247479426,
+    "risk_score": 52.78649127378396,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CAN",
     "country": "CAN",
-    "risk_score": 51.96626822898878,
+    "risk_score": 51.93102893777233,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CHE",
     "country": "CHE",
-    "risk_score": 48.26401260576159,
+    "risk_score": 48.28520705138373,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CHL",
     "country": "CHL",
-    "risk_score": 52.1865430155826,
+    "risk_score": 52.15224758046974,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CHN",
     "country": "CHN",
-    "risk_score": 42.217079470182874,
+    "risk_score": 42.33970998511982,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CIV",
     "country": "CIV",
-    "risk_score": 41.790970895655654,
+    "risk_score": 41.92378981816971,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CMR",
     "country": "CMR",
-    "risk_score": 49.515926000833346,
+    "risk_score": 49.525250402027815,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "COD",
     "country": "COD",
-    "risk_score": 52.094466012326784,
+    "risk_score": 52.07047636092512,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COG",
     "country": "COG",
-    "risk_score": 52.12862287858003,
+    "risk_score": 52.094766662526126,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COL",
     "country": "COL",
-    "risk_score": 52.77435722357911,
+    "risk_score": 52.73142756323362,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COM",
     "country": "COM",
-    "risk_score": 48.85904548617449,
+    "risk_score": 48.878348060859956,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CPV",
     "country": "CPV",
-    "risk_score": 44.139613337161165,
+    "risk_score": 44.23392228194869,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CRI",
     "country": "CRI",
-    "risk_score": 46.14057028423463,
+    "risk_score": 46.199671281126534,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CYP",
     "country": "CYP",
-    "risk_score": 49.33127186209034,
+    "risk_score": 49.33918754008277,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CZE",
     "country": "CZE",
-    "risk_score": 49.94503361995427,
+    "risk_score": 49.94407611312799,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DEU",
     "country": "DEU",
-    "risk_score": 52.04995633207044,
+    "risk_score": 52.01209093126161,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DJI",
     "country": "DJI",
-    "risk_score": 40.36892147720033,
+    "risk_score": 40.52422209551134,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DMA",
     "country": "DMA",
-    "risk_score": 52.54856254240622,
+    "risk_score": 52.588801549610906,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DNK",
     "country": "DNK",
-    "risk_score": 47.121740875052836,
+    "risk_score": 47.16420563236099,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DOM",
     "country": "DOM",
-    "risk_score": 50.82344991273889,
+    "risk_score": 50.810854087882575,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DZA",
     "country": "DZA",
-    "risk_score": 50.17585044340398,
+    "risk_score": 50.17385325006539,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ECU",
     "country": "ECU",
-    "risk_score": 45.64808572350863,
+    "risk_score": 45.71510933590576,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "EGY",
     "country": "EGY",
-    "risk_score": 58.59334023789364,
+    "risk_score": 58.617456268789205,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ESP",
     "country": "ESP",
-    "risk_score": 48.169100639284224,
+    "risk_score": 48.19704505429591,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "EST",
     "country": "EST",
-    "risk_score": 56.240791615505245,
+    "risk_score": 56.14004337247941,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ETH",
     "country": "ETH",
-    "risk_score": 52.72884163281665,
+    "risk_score": 52.83577614166588,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FIN",
     "country": "FIN",
-    "risk_score": 52.58871478938916,
+    "risk_score": 52.54251510098591,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FJI",
     "country": "FJI",
-    "risk_score": 48.008062358070816,
+    "risk_score": 48.03666438795184,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "FRA",
     "country": "FRA",
-    "risk_score": 51.636175593082335,
+    "risk_score": 51.6045907185673,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FSM",
     "country": "FSM",
-    "risk_score": 54.29140686258104,
+    "risk_score": 54.22127553367142,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GAB",
     "country": "GAB",
-    "risk_score": 49.22917831087523,
+    "risk_score": 49.23775336829366,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GBR",
     "country": "GBR",
-    "risk_score": 53.604682986691756,
+    "risk_score": 53.54521554104934,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GEO",
     "country": "GEO",
-    "risk_score": 43.9301000128724,
+    "risk_score": 44.03330302597503,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GHA",
     "country": "GHA",
-    "risk_score": 57.21762923616122,
+    "risk_score": 57.26315748648847,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GIN",
     "country": "GIN",
-    "risk_score": 44.47902041649465,
+    "risk_score": 44.572658296439386,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GMB",
     "country": "GMB",
-    "risk_score": 49.871809424679576,
+    "risk_score": 49.882762072159224,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GNB",
     "country": "GNB",
-    "risk_score": 46.137669512691055,
+    "risk_score": 46.2007267600631,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GNQ",
     "country": "GNQ",
-    "risk_score": 58.33611382765121,
+    "risk_score": 58.19679390443973,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GRC",
     "country": "GRC",
-    "risk_score": 52.82767181713816,
+    "risk_score": 52.78119466257515,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GRD",
     "country": "GRD",
-    "risk_score": 51.18826815830229,
+    "risk_score": 51.16776955614243,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GTM",
     "country": "GTM",
-    "risk_score": 45.50886403204529,
+    "risk_score": 45.57963730456656,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GUY",
     "country": "GUY",
-    "risk_score": 34.84214706981733,
+    "risk_score": 35.09360023263923,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HKG",
     "country": "HKG",
-    "risk_score": 45.79353600346922,
+    "risk_score": 45.85775559958234,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HND",
     "country": "HND",
-    "risk_score": 49.666136102193576,
+    "risk_score": 49.674019972131376,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HRV",
     "country": "HRV",
-    "risk_score": 51.047214317272555,
+    "risk_score": 51.031984066309874,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "HTI",
     "country": "HTI",
-    "risk_score": 70.42315964445456,
+    "risk_score": 70.24881868094712,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "HUN",
     "country": "HUN",
-    "risk_score": 54.82494798422252,
+    "risk_score": 54.74616355089047,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "IDN",
     "country": "IDN",
-    "risk_score": 45.11575621370592,
+    "risk_score": 45.19446620595919,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IND",
     "country": "IND",
-    "risk_score": 42.92015755175953,
+    "risk_score": 43.03734207395492,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IRL",
     "country": "IRL",
-    "risk_score": 34.15222711943323,
+    "risk_score": 34.41078482635304,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IRN",
     "country": "IRN",
-    "risk_score": 63.25671330842442,
+    "risk_score": 63.201513237624866,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "IRQ",
     "country": "IRQ",
-    "risk_score": 52.296404426682116,
+    "risk_score": 52.25443426514769,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ISL",
     "country": "ISL",
-    "risk_score": 54.35700793047937,
+    "risk_score": 54.286650380698944,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ISR",
     "country": "ISR",
-    "risk_score": 49.68925978215863,
+    "risk_score": 49.69332809208142,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ITA",
     "country": "ITA",
-    "risk_score": 52.1126799558904,
+    "risk_score": 52.07388938538991,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JAM",
     "country": "JAM",
-    "risk_score": 51.71387080030881,
+    "risk_score": 51.686359066433205,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JOR",
     "country": "JOR",
-    "risk_score": 50.50915599911257,
+    "risk_score": 50.49956506326866,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JPN",
     "country": "JPN",
-    "risk_score": 52.06886004524167,
+    "risk_score": 52.03323989842802,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KAZ",
     "country": "KAZ",
-    "risk_score": 53.839831027484806,
+    "risk_score": 53.79170979800867,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KEN",
     "country": "KEN",
-    "risk_score": 47.87271640083809,
+    "risk_score": 47.90992267488121,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KGZ",
     "country": "KGZ",
-    "risk_score": 47.77025242000215,
+    "risk_score": 47.81802859532915,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KHM",
     "country": "KHM",
-    "risk_score": 45.43398839400877,
+    "risk_score": 45.50731756012354,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KIR",
     "country": "KIR",
-    "risk_score": 55.4135460128858,
+    "risk_score": 55.333873988486516,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KNA",
     "country": "KNA",
-    "risk_score": 54.1209501442134,
+    "risk_score": 54.052188051121774,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KOR",
     "country": "KOR",
-    "risk_score": 50.8262263239537,
+    "risk_score": 50.80867802590486,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KOS",
     "country": "KOS",
-    "risk_score": 50.62791429378036,
+    "risk_score": 50.61972399479111,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KWT",
     "country": "KWT",
-    "risk_score": 44.84844430299991,
+    "risk_score": 44.84911441057739,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LAO",
     "country": "LAO",
-    "risk_score": 52.05517586370779,
+    "risk_score": 52.0281008928985,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LBR",
     "country": "LBR",
-    "risk_score": 56.996657790155055,
+    "risk_score": 56.89501835122879,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LBY",
     "country": "LBY",
-    "risk_score": 32.807415696753225,
+    "risk_score": 32.840749173584285,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LCA",
     "country": "LCA",
-    "risk_score": 48.20192211205478,
+    "risk_score": 48.22652612443014,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LIE",
     "country": "LIE",
-    "risk_score": 46.53759757422522,
+    "risk_score": 46.58621416790389,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LSO",
     "country": "LSO",
-    "risk_score": 54.7658788164417,
+    "risk_score": 54.68937882917131,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LTU",
     "country": "LTU",
-    "risk_score": 49.87986310760495,
+    "risk_score": 49.88170632455513,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LUX",
     "country": "LUX",
-    "risk_score": 48.667395657569784,
+    "risk_score": 48.68472661094948,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LVA",
     "country": "LVA",
-    "risk_score": 54.21764320263145,
+    "risk_score": 54.14841571892707,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MAC",
     "country": "MAC",
-    "risk_score": 43.0872241113986,
+    "risk_score": 43.11407846397244,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MAR",
     "country": "MAR",
-    "risk_score": 45.60989161461356,
+    "risk_score": 45.67940647520405,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MDA",
     "country": "MDA",
-    "risk_score": 61.53270383346828,
+    "risk_score": 61.3526950827363,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MDG",
     "country": "MDG",
-    "risk_score": 54.982840963914725,
+    "risk_score": 54.910564380260624,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MDV",
     "country": "MDV",
-    "risk_score": 50.32876840362591,
+    "risk_score": 50.326915827571,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MEX",
     "country": "MEX",
-    "risk_score": 53.95547569865232,
+    "risk_score": 53.89050079733835,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MHL",
     "country": "MHL",
-    "risk_score": 49.744335209568106,
+    "risk_score": 49.749661087163076,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MKD",
     "country": "MKD",
-    "risk_score": 50.49936448223972,
+    "risk_score": 50.492741626414656,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MLI",
     "country": "MLI",
-    "risk_score": 47.49877018185913,
+    "risk_score": 47.54166663908571,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MLT",
     "country": "MLT",
-    "risk_score": 45.78475813642674,
+    "risk_score": 45.85199128227296,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MMR",
     "country": "MMR",
-    "risk_score": 70.28684092588246,
+    "risk_score": 70.11529858939377,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MNE",
     "country": "MNE",
-    "risk_score": 54.84211226081245,
+    "risk_score": 54.7665955864829,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MNG",
     "country": "MNG",
-    "risk_score": 54.05784294302708,
+    "risk_score": 54.00253896625476,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MOZ",
     "country": "MOZ",
-    "risk_score": 57.80224771105823,
+    "risk_score": 57.75879801867124,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MRT",
     "country": "MRT",
-    "risk_score": 49.038564564727885,
+    "risk_score": 49.05446946449694,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MUS",
     "country": "MUS",
-    "risk_score": 51.185438367560025,
+    "risk_score": 51.16765635882943,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MWI",
     "country": "MWI",
-    "risk_score": 65.40899475350552,
+    "risk_score": 65.32236368181489,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MYS",
     "country": "MYS",
-    "risk_score": 44.82772497085844,
+    "risk_score": 44.910190040313,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NAM",
     "country": "NAM",
-    "risk_score": 52.85516981227143,
+    "risk_score": 52.81134295961368,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NER",
     "country": "NER",
-    "risk_score": 44.930235123014114,
+    "risk_score": 45.01701422769551,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NGA",
     "country": "NGA",
-    "risk_score": 56.37129296199467,
+    "risk_score": 56.43007741051632,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NIC",
     "country": "NIC",
-    "risk_score": 46.48812858360605,
+    "risk_score": 46.54244915590231,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NLD",
     "country": "NLD",
-    "risk_score": 49.53347368562097,
+    "risk_score": 49.53811439616569,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NOR",
     "country": "NOR",
-    "risk_score": 47.75067358460565,
+    "risk_score": 47.782670872774126,
+    "risk_level": "MEDIUM"
+  },
+  {
+    "iso_alpha3": "NOT FOUND",
+    "country": "NOT FOUND",
+    "risk_score": 50.0,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NPL",
     "country": "NPL",
-    "risk_score": 46.35962894321944,
+    "risk_score": 46.42009663438446,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NRU",
     "country": "NRU",
-    "risk_score": 53.39442976873475,
+    "risk_score": 53.342345762311595,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NZL",
     "country": "NZL",
-    "risk_score": 54.192492490227494,
+    "risk_score": 54.12232023055637,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "OMN",
     "country": "OMN",
-    "risk_score": 47.677225477647944,
+    "risk_score": 47.71142420743765,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PAK",
     "country": "PAK",
-    "risk_score": 51.33507796512295,
+    "risk_score": 51.314738564836034,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PAN",
     "country": "PAN",
-    "risk_score": 44.67787225772982,
+    "risk_score": 44.76027050623571,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PER",
     "country": "PER",
-    "risk_score": 47.715070527316996,
+    "risk_score": 47.749587681199834,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PHL",
     "country": "PHL",
-    "risk_score": 44.57530843454924,
+    "risk_score": 44.66320689321793,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PLW",
     "country": "PLW",
-    "risk_score": 49.42200851488566,
+    "risk_score": 49.43196796747242,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PNG",
     "country": "PNG",
-    "risk_score": 45.26156983468295,
+    "risk_score": 45.34082137091523,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "POL",
     "country": "POL",
-    "risk_score": 49.926735848595136,
+    "risk_score": 49.928842101542145,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PRI",
     "country": "PRI",
-    "risk_score": 55.04618625411963,
+    "risk_score": 54.95861838524211,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PRT",
     "country": "PRT",
-    "risk_score": 50.04410259643177,
+    "risk_score": 50.04058763233839,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PRY",
     "country": "PRY",
-    "risk_score": 48.6917777245412,
+    "risk_score": 48.715275684785226,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "QAT",
     "country": "QAT",
-    "risk_score": 43.79123304857763,
+    "risk_score": 43.886169173079125,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ROU",
     "country": "ROU",
-    "risk_score": 59.50268190220031,
+    "risk_score": 59.35330801097786,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "RUS",
     "country": "RUS",
-    "risk_score": 59.331373995754035,
+    "risk_score": 59.18593044727232,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "RWA",
     "country": "RWA",
-    "risk_score": 49.73214550699422,
+    "risk_score": 49.74646870617151,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SAU",
     "country": "SAU",
-    "risk_score": 47.15559755585179,
+    "risk_score": 47.20100742652334,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SDN",
     "country": "SDN",
-    "risk_score": 59.9273014581636,
+    "risk_score": 59.928715119337376,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SEN",
     "country": "SEN",
-    "risk_score": 45.189727350181215,
+    "risk_score": 45.269124521241466,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SGP",
     "country": "SGP",
-    "risk_score": 44.1822951690862,
+    "risk_score": 44.19169543128504,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SLB",
     "country": "SLB",
-    "risk_score": 51.538493865892725,
+    "risk_score": 51.5139132244668,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SLE",
     "country": "SLE",
-    "risk_score": 54.35690758836145,
+    "risk_score": 54.296386535325254,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SLV",
     "country": "SLV",
-    "risk_score": 47.69083524772365,
+    "risk_score": 47.72361938786499,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SMR",
     "country": "SMR",
-    "risk_score": 47.51352445764124,
+    "risk_score": 47.46946695602017,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SOM",
     "country": "SOM",
-    "risk_score": 52.46308572916851,
+    "risk_score": 52.4244577229763,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SRB",
     "country": "SRB",
-    "risk_score": 53.453199151894054,
+    "risk_score": 53.398927053770144,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SSD",
     "country": "SSD",
-    "risk_score": 45.4398055080445,
+    "risk_score": 45.43284208903233,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "STP",
     "country": "STP",
-    "risk_score": 57.245827182364344,
+    "risk_score": 57.137572464302345,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SUR",
     "country": "SUR",
-    "risk_score": 61.51246057364148,
+    "risk_score": 61.41482223427309,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SVK",
     "country": "SVK",
-    "risk_score": 55.095566659621255,
+    "risk_score": 55.01272576704529,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SVN",
     "country": "SVN",
-    "risk_score": 51.46692659592774,
+    "risk_score": 51.44004214481237,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SWE",
     "country": "SWE",
-    "risk_score": 51.137755834298034,
+    "risk_score": 51.115376648294315,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SWZ",
     "country": "SWZ",
-    "risk_score": 47.86168789739714,
+    "risk_score": 47.89779096842461,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SYC",
     "country": "SYC",
-    "risk_score": 46.847929537815425,
+    "risk_score": 46.89632177205521,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TCD",
     "country": "TCD",
-    "risk_score": 50.36161441219117,
+    "risk_score": 50.35717774123965,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TGO",
     "country": "TGO",
-    "risk_score": 45.309127501567986,
+    "risk_score": 45.38589403251743,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "THA",
     "country": "THA",
-    "risk_score": 47.78939188317688,
+    "risk_score": 47.81970772536487,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TJK",
     "country": "TJK",
-    "risk_score": 41.273204730790624,
+    "risk_score": 41.418799679646504,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TKM",
     "country": "TKM",
-    "risk_score": 50.87750617468427,
+    "risk_score": 50.86325524964289,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TLS",
     "country": "TLS",
-    "risk_score": 51.14664407288189,
+    "risk_score": 51.20659845781611,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TON",
     "country": "TON",
-    "risk_score": 51.15559933321912,
+    "risk_score": 51.13658257224994,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TTO",
     "country": "TTO",
-    "risk_score": 50.026025530030175,
+    "risk_score": 50.02078437174444,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUN",
     "country": "TUN",
-    "risk_score": 54.11957184311759,
+    "risk_score": 54.05627315309986,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUR",
     "country": "TUR",
-    "risk_score": 59.019715725903815,
+    "risk_score": 59.0359063354703,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUV",
     "country": "TUV",
-    "risk_score": 44.31699243806051,
+    "risk_score": 44.40568071540279,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TWN",
     "country": "TWN",
-    "risk_score": 43.22455616122355,
+    "risk_score": 43.331300690635665,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TZA",
     "country": "TZA",
-    "risk_score": 44.985522751502415,
+    "risk_score": 45.06951965357376,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "UGA",
     "country": "UGA",
-    "risk_score": 45.40374405220935,
+    "risk_score": 45.482241232804974,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "UKR",
     "country": "UKR",
-    "risk_score": 65.35923963513217,
+    "risk_score": 65.1241997613416,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "URY",
     "country": "URY",
-    "risk_score": 52.38460051834755,
+    "risk_score": 52.34752277577678,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "USA",
     "country": "USA",
-    "risk_score": 51.867678267435316,
+    "risk_score": 51.83608025680405,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "UZB",
     "country": "UZB",
-    "risk_score": 49.486251923497825,
+    "risk_score": 49.506186032045484,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "VCT",
     "country": "VCT",
-    "risk_score": 50.036110107117665,
+    "risk_score": 50.03646200706777,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "VEN",
     "country": "VEN",
-    "risk_score": 62.88092977735087,
+    "risk_score": 62.831453925916634,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "VNM",
     "country": "VNM",
-    "risk_score": 42.52905394488573,
+    "risk_score": 42.652740484140104,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "VUT",
     "country": "VUT",
-    "risk_score": 53.48747752206728,
+    "risk_score": 53.428697868319425,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "WSM",
     "country": "WSM",
-    "risk_score": 47.50300230838757,
+    "risk_score": 47.540650996182194,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "YEM",
     "country": "YEM",
-    "risk_score": 70.07354113073986,
+    "risk_score": 69.9071575964139,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZAF",
     "country": "ZAF",
-    "risk_score": 53.270031718402066,
+    "risk_score": 53.21557793972523,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZMB",
     "country": "ZMB",
-    "risk_score": 54.10323163986143,
+    "risk_score": 54.20082494707799,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZWE",
     "country": "ZWE",
-    "risk_score": 53.27079602829382,
+    "risk_score": 53.38186442117292,
     "risk_level": "HIGH"
   }
 ]

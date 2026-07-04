@@ -6,7 +6,7 @@
     "IMF WEO",
     "ACLED"
   ],
-  "countries": 225,
+  "countries": 197,
   "years": "2015-2025",
   "weighting_method": "expert",
   "mapping_version": "1.0"
