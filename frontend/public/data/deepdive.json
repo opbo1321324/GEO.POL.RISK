@@ -1,0 +1,5 @@
+[
+  { "country": "United States", "year": 2025, "risk_score": 35.2, "risk_level": "MEDIUM", "inflation": 2.4, "gdp_growth": 1.8, "government_debt": 121.5, "conflict_events": 0 },
+  { "country": "China", "year": 2025, "risk_score": 45.1, "risk_level": "MEDIUM", "inflation": 1.2, "gdp_growth": 4.5, "government_debt": 85.2, "conflict_events": 2 },
+  { "country": "Russia", "year": 2025, "risk_score": 88.5, "risk_level": "VERY HIGH", "inflation": 15.6, "gdp_growth": -2.1, "government_debt": 25.4, "conflict_events": 1450 }
+]

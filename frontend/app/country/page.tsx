@@ -15,7 +15,7 @@ export default function CountryPage() {
 
   // Fetch country list
   useEffect(() => {
-    fetch(`${API_URL}/api/countries`)
+    fetch('/data/countries.json')
       .then(res => res.json())
       .then(d => setCountries(d))
       .catch(e => console.error("Failed to load country list", e));
@@ -25,17 +25,20 @@ export default function CountryPage() {
   useEffect(() => {
     if (!selectedCountry) return;
     setLoading(true);
-    fetch(`${API_URL}/api/country/${encodeURIComponent(selectedCountry)}`)
+    fetch('/data/deepdive.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch country data');
         return res.json();
       })
-      .then(d => {
-        setData(d);
+      .then((d: any[]) => {
+        // Filter the full dataset for the selected country
+        const countryData = d.filter(item => item.country === selectedCountry);
+        setData(countryData);
         setLoading(false);
       })
       .catch(e => {
-        setError(e.message);
+        console.warn("Pipeline data not found.", e);
+        setError("Pipeline Country data not found. Please run the backend pipeline.");
         setLoading(false);
       });
   }, [selectedCountry]);

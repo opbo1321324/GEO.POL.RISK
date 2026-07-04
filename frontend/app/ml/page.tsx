@@ -12,7 +12,7 @@ export default function MLPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`${API_URL}/api/ml-analysis`)
+    fetch('/data/ml.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch ML data');
         return res.json();
@@ -22,7 +22,8 @@ export default function MLPage() {
         setLoading(false);
       })
       .catch(e => {
-        setError(e.message);
+        console.warn("Pipeline data not found.", e);
+        setError("Pipeline ML data not found. Please run the backend pipeline.");
         setLoading(false);
       });
   }, []);

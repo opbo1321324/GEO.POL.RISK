@@ -1,0 +1,12 @@
+[
+  { "iso_alpha3": "USA", "country": "United States", "risk_score": 35.2, "risk_level": "MEDIUM" },
+  { "iso_alpha3": "CHN", "country": "China", "risk_score": 45.1, "risk_level": "MEDIUM" },
+  { "iso_alpha3": "RUS", "country": "Russia", "risk_score": 88.5, "risk_level": "VERY HIGH" },
+  { "iso_alpha3": "IND", "country": "India", "risk_score": 55.4, "risk_level": "HIGH" },
+  { "iso_alpha3": "IRN", "country": "Iran", "risk_score": 85.1, "risk_level": "VERY HIGH" },
+  { "iso_alpha3": "UKR", "country": "Ukraine", "risk_score": 82.4, "risk_level": "VERY HIGH" },
+  { "iso_alpha3": "GBR", "country": "United Kingdom", "risk_score": 25.3, "risk_level": "LOW" },
+  { "iso_alpha3": "FRA", "country": "France", "risk_score": 28.5, "risk_level": "MEDIUM" },
+  { "iso_alpha3": "DEU", "country": "Germany", "risk_score": 22.1, "risk_level": "LOW" },
+  { "iso_alpha3": "JPN", "country": "Japan", "risk_score": 20.5, "risk_level": "LOW" }
+]

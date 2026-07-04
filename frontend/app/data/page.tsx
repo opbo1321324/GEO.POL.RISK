@@ -15,7 +15,7 @@ export default function DataPage() {
   const rowsPerPage = 50;
 
   useEffect(() => {
-    fetch(`${API_URL}/api/full-data`)
+    fetch('/data/deepdive.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch full dataset');
         return res.json();
@@ -25,7 +25,8 @@ export default function DataPage() {
         setLoading(false);
       })
       .catch(e => {
-        setError(e.message);
+        console.warn("Pipeline data not found.", e);
+        setError("Pipeline Data Explorer data not found. Please run the backend pipeline.");
         setLoading(false);
       });
   }, []);

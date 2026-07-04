@@ -13,27 +13,16 @@ export default function MapPage() {
   const [clickedCountry, setClickedCountry] = useState<any>(null);
 
   useEffect(() => {
-    // 100% Standalone Data - ZERO Backend Required
-    const nations = [
-      "United States", "China", "Russia", "India", "United Kingdom",
-      "France", "Germany", "Japan", "Brazil", "Israel",
-      "Iran", "Saudi Arabia", "South Africa", "Turkey", "Egypt",
-      "South Korea", "North Korea", "Pakistan", "Ukraine", "Taiwan"
-    ];
-    
-    const mockData = nations.map((country, index) => {
-      const baseRisk = (index * 7 + 13) % 100; 
-      return {
-        country: country,
-        risk_score: baseRisk,
-        gdp_growth: (Math.random() * 6) - 2,
-        inflation: Math.random() * 15,
-        protests: Math.floor(Math.random() * 50),
-        fatalities: Math.floor(Math.random() * 1000)
-      };
-    });
-
-    setData(mockData);
+    fetch('/data/map.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch map data');
+        return res.json();
+      })
+      .then(d => setData(d))
+      .catch(e => {
+        console.warn("Pipeline data not found, using empty fallback.", e);
+        setData([]);
+      });
   }, []);
 
   const getCountryColor = (geoName: string) => {
