@@ -1,29 +1,31 @@
 'use client';
 // @ts-nocheck
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { ComposableMap, Geographies, Geography, Sphere, Graticule } from 'react-simple-maps';
 import { AlertCircle, Maximize2, RotateCcw, Search } from 'lucide-react';
-import dynamic from 'next/dynamic';
 import { CountryPanel } from '@/components/globe/CountryPanel';
 import { Particles } from '@/components/Particles';
 
-// Dynamically import the GlobeScene to prevent server-side WebGPU errors
-const GlobeScene = dynamic(() => import('@/components/globe/GlobeScene').then(mod => mod.GlobeScene), { 
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-[#050816]">
-      <div className="w-16 h-16 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
-      <div className="mt-6 text-blue-400 font-mono text-sm tracking-widest uppercase animate-pulse">Initializing Global Matrix...</div>
-    </div>
-  )
-});
-
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:10000';
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 export default function MapPage() {
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [clickedCountry, setClickedCountry] = useState<any>(null);
+  const [rotation, setRotation] = useState(0);
+
+  // Auto-spin the globe
+  useEffect(() => {
+    let animationFrameId: number;
+    const rotate = () => {
+      setRotation((r) => (r + 0.3) % 360);
+      animationFrameId = requestAnimationFrame(rotate);
+    };
+    rotate();
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   useEffect(() => {
     fetch(`${API_URL}/api/map`)
@@ -41,6 +43,17 @@ export default function MapPage() {
       });
   }, []);
 
+  const getCountryColor = (geoName: string) => {
+    const countryData = data.find((d: any) => d.country === geoName);
+    if (!countryData) return '#1E293B'; // Slate 800 for no data
+    
+    const score = countryData.risk_score;
+    if (score <= 25) return '#00E676'; // Green
+    if (score <= 50) return '#FFC107'; // Yellow
+    if (score <= 75) return '#FF7043'; // Orange
+    return '#F44336'; // Red
+  };
+
   if (error) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-[#050816]">
@@ -55,10 +68,46 @@ export default function MapPage() {
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#050816] text-slate-200 overflow-hidden font-sans">
+      
+      {/* Elegant Dot Particles */}
       <Particles />
-      {/* 3D Globe Background */}
-      <div className="absolute inset-0 z-0">
-        {!loading && <GlobeScene data={data} setClickedCountry={setClickedCountry} />}
+
+      {/* 3D SVG Globe */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center pt-10">
+        <div className="w-full max-w-4xl opacity-90 drop-shadow-[0_0_35px_rgba(59,130,246,0.2)]">
+          <ComposableMap
+            projection="geoOrthographic"
+            projectionConfig={{
+              scale: 300,
+              rotate: [rotation, 0, 0],
+            }}
+          >
+            <Sphere stroke="#1E293B" strokeWidth={0.5} fill="#0B1224" />
+            <Graticule stroke="#1E293B" strokeWidth={0.5} />
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const color = getCountryColor(geo.properties.name);
+                  return (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill={color}
+                      stroke="#050816"
+                      strokeWidth={0.5}
+                      onClick={() => setClickedCountry({ properties: { NAME: geo.properties.name } })}
+                      style={{
+                        default: { outline: "none", transition: "all 250ms" },
+                        hover: { fill: "#3B82F6", outline: "none", cursor: "pointer", transition: "all 250ms" },
+                        pressed: { fill: "#2563EB", outline: "none" },
+                      }}
+                    />
+                  );
+                })
+              }
+            </Geographies>
+          </ComposableMap>
+        </div>
       </div>
 
       {/* Top HUD */}
@@ -122,8 +171,8 @@ export default function MapPage() {
 
       {/* Right Slide-out Panel */}
       <CountryPanel 
-        country={clickedCountry?.country || (clickedCountry && clickedCountry.properties?.NAME)} 
-        data={data.find(d => d.country === (clickedCountry?.country || (clickedCountry && clickedCountry.properties?.NAME)) || d.iso_alpha3 === clickedCountry?.properties?.ISO_A3)} 
+        country={clickedCountry?.properties?.NAME} 
+        data={data.find(d => d.country === clickedCountry?.properties?.NAME)} 
         onClose={() => setClickedCountry(null)} 
       />
     </div>

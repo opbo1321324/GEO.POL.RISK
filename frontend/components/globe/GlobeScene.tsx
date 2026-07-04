@@ -1,17 +1,30 @@
 // @ts-nocheck
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { useEffect, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 
 const GlobeRenderer = ({ data, setClickedCountry }: any) => {
-  const globeRef = useRef<any>(null);
-  const { scene } = useThree();
   const [geoJson, setGeoJson] = useState<any>(null);
 
+  // Lazy initialize the globe exactly ONCE to prevent WebGL crashes
+  const [globe] = useState(() => {
+    const g = new ThreeGlobe()
+      .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png');
+    
+    const material = g.globeMaterial() as THREE.MeshPhongMaterial;
+    material.color = new THREE.Color('#050816');
+    material.emissive = new THREE.Color('#111827');
+    material.emissiveIntensity = 0.1;
+    material.shininess = 0.7;
+    return g;
+  });
+
+  // Fetch local geojson
   useEffect(() => {
     fetch('/custom.geo.json')
       .then(res => res.json())
@@ -19,35 +32,11 @@ const GlobeRenderer = ({ data, setClickedCountry }: any) => {
       .catch(err => console.error('Failed to load GeoJSON', err));
   }, []);
 
-  // Instantiate globe ONLY once to prevent WebGL crashes
+  // Safely mutate globe properties when data or geojson loads
   useEffect(() => {
-    const Globe = new ThreeGlobe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-      .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png');
-    
-    // Apply premium materials
-    const material = Globe.globeMaterial() as THREE.MeshPhongMaterial;
-    material.color = new THREE.Color('#050816');
-    material.emissive = new THREE.Color('#111827');
-    material.emissiveIntensity = 0.1;
-    material.shininess = 0.7;
+    if (!globe || !geoJson) return;
 
-    scene.add(Globe);
-    globeRef.current = Globe;
-
-    return () => {
-      scene.remove(Globe);
-      if (Globe.geometry) Globe.geometry.dispose();
-      if (Globe.material) Globe.material.dispose();
-    };
-  }, [scene]);
-
-  // Mutate globe polygons when data or geoJson loads
-  useEffect(() => {
-    const Globe = globeRef.current;
-    if (!Globe || !geoJson) return;
-
-    Globe.polygonsData(geoJson.features)
+    globe.polygonsData(geoJson.features)
       .polygonAltitude(0.01)
       .polygonCapColor((feat: any) => {
         const countryData = data.find((d: any) => d.iso_alpha3 === feat.id || d.country === feat.properties.ADMIN || d.iso_alpha3 === feat.properties.ISO_A3);
@@ -62,19 +51,20 @@ const GlobeRenderer = ({ data, setClickedCountry }: any) => {
       .polygonSideColor(() => 'rgba(0,0,0,0)')
       .polygonStrokeColor(() => '#111')
       .polygonHoverColor(() => '#3B82F6')
-      .onPolygonClick((feat: any, event: any) => {
+      .onPolygonClick((feat: any) => {
         setClickedCountry(feat);
       });
-  }, [data, geoJson, setClickedCountry]);
+  }, [data, geoJson, globe, setClickedCountry]);
 
-  // Auto-rotation
+  // Handle slow spin
   useFrame(() => {
-    if (globeRef.current) {
-      globeRef.current.rotation.y += 0.0005; // Very slow rotation as requested
+    if (globe) {
+      globe.rotation.y += 0.0005;
     }
   });
 
-  return null; // Globe is added directly to scene
+  // Officially mount the ThreeGlobe instance into React Three Fiber
+  return globe ? <primitive object={globe} /> : null;
 };
 
 export function GlobeScene({ data, setClickedCountry }: { data: any[], setClickedCountry: (d: any) => void }) {
