@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { AlertCircle, Maximize2, RotateCcw, Search } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { CountryPanel } from '@/components/globe/CountryPanel';
+import { Particles } from '@/components/Particles';
 
 // Dynamically import the GlobeScene to prevent server-side WebGPU errors
 const GlobeScene = dynamic(() => import('@/components/globe/GlobeScene').then(mod => mod.GlobeScene), { 
@@ -54,7 +55,7 @@ export default function MapPage() {
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#050816] text-slate-200 overflow-hidden font-sans">
-      
+      <Particles />
       {/* 3D Globe Background */}
       <div className="absolute inset-0 z-0">
         {!loading && <GlobeScene data={data} setClickedCountry={setClickedCountry} />}

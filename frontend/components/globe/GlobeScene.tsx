@@ -13,9 +13,10 @@ const GlobeRenderer = ({ data, hoveredCountry, setHoveredCountry, setClickedCoun
   const [geoJson, setGeoJson] = useState<any>(null);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/vasturiano/three-globe/master/example/datasets/ne_110m_admin_0_countries.geojson')
+    fetch('/custom.geo.json')
       .then(res => res.json())
-      .then(setGeoJson);
+      .then(setGeoJson)
+      .catch(err => console.error('Failed to load GeoJSON', err));
   }, []);
 
   // Create the globe instance once
@@ -28,7 +29,7 @@ const GlobeRenderer = ({ data, hoveredCountry, setHoveredCountry, setClickedCoun
       g.polygonsData(geoJson.features)
         .polygonAltitude(0.01)
         .polygonCapColor((feat: any) => {
-          const countryData = data.find((d: any) => d.iso_alpha3 === feat.id || d.country === feat.properties.NAME || d.iso_alpha3 === feat.properties.ISO_A3);
+          const countryData = data.find((d: any) => d.iso_alpha3 === feat.id || d.country === feat.properties.ADMIN || d.iso_alpha3 === feat.properties.ISO_A3);
           if (!countryData) return 'rgba(20, 30, 50, 0.5)';
           
           const score = countryData.risk_score;
