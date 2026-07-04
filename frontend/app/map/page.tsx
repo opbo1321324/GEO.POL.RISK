@@ -1,68 +1,86 @@
 // @ts-nocheck
 'use client';
 import { useEffect, useState } from 'react';
-import { AlertCircle, Maximize2, RotateCcw } from 'lucide-react';
+import { ComposableMap, Geographies, Geography, Graticule } from 'react-simple-maps';
+import { Maximize2, RotateCcw } from 'lucide-react';
 import { CountryPanel } from '@/components/globe/CountryPanel';
 import { Particles } from '@/components/Particles';
-import dynamic from 'next/dynamic';
 
-// Dynamically import the GlobeScene to prevent SSR issues with Three.js
-const GlobeScene = dynamic(() => import('@/components/globe/GlobeScene').then(mod => mod.GlobeScene), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex items-center justify-center">
-      <div className="animate-pulse flex flex-col items-center">
-        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <p className="mt-4 text-slate-400 font-medium">Initializing WebGL Engine...</p>
-      </div>
-    </div>
-  )
-});
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 export default function MapPage() {
   const [data, setData] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
   const [clickedCountry, setClickedCountry] = useState<any>(null);
 
   useEffect(() => {
-    // Completely Standalone Frontend Data Generation (No Backend Required)
-    const generateIntelligenceData = () => {
-      const nations = [
-        "United States", "China", "Russia", "India", "United Kingdom",
-        "France", "Germany", "Japan", "Brazil", "Israel",
-        "Iran", "Saudi Arabia", "South Africa", "Turkey", "Egypt",
-        "South Korea", "North Korea", "Pakistan", "Ukraine", "Taiwan"
-      ];
-      
-      return nations.map((country, index) => {
-        // Deterministic but varied scores for demo
-        const baseRisk = (index * 7 + 13) % 100; 
-        return {
-          country: country,
-          risk_score: baseRisk,
-          gdp_growth: (Math.random() * 6) - 2,
-          inflation: Math.random() * 15,
-          protests: Math.floor(Math.random() * 50),
-          fatalities: Math.floor(Math.random() * 1000)
-        };
-      });
-    };
+    // 100% Standalone Data - ZERO Backend Required
+    const nations = [
+      "United States", "China", "Russia", "India", "United Kingdom",
+      "France", "Germany", "Japan", "Brazil", "Israel",
+      "Iran", "Saudi Arabia", "South Africa", "Turkey", "Egypt",
+      "South Korea", "North Korea", "Pakistan", "Ukraine", "Taiwan"
+    ];
+    
+    const mockData = nations.map((country, index) => {
+      const baseRisk = (index * 7 + 13) % 100; 
+      return {
+        country: country,
+        risk_score: baseRisk,
+        gdp_growth: (Math.random() * 6) - 2,
+        inflation: Math.random() * 15,
+        protests: Math.floor(Math.random() * 50),
+        fatalities: Math.floor(Math.random() * 1000)
+      };
+    });
 
-    setTimeout(() => {
-      setData(generateIntelligenceData());
-      setLoading(false);
-    }, 500); // Simulate brief network loading for UI effect
+    setData(mockData);
   }, []);
+
+  const getCountryColor = (geoName: string) => {
+    const countryData = data.find((d: any) => d.country === geoName);
+    if (!countryData) return '#1E293B'; // Slate 800 for no data
+    
+    const score = countryData.risk_score;
+    if (score <= 25) return '#00E676';
+    if (score <= 50) return '#FFC107';
+    if (score <= 75) return '#FF7043';
+    return '#F44336';
+  };
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#050816] text-slate-200 overflow-hidden font-sans">
       
-      {/* Elegant Dot Particles */}
       <Particles />
 
-      {/* 3D WebGL Globe */}
-      <div className="absolute inset-0 z-0">
-        {!loading && <GlobeScene data={data} setClickedCountry={setClickedCountry} />}
+      {/* STABLE, SIMPLE 2D FLAT MAP */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center pt-20">
+        <div className="w-full max-w-6xl opacity-90">
+          <ComposableMap
+            projection="geoEquirectangular"
+            projectionConfig={{ scale: 140 }}
+          >
+            <Graticule stroke="#1E293B" strokeWidth={0.5} />
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill={getCountryColor(geo.properties.name)}
+                    stroke="#050816"
+                    strokeWidth={0.5}
+                    onClick={() => setClickedCountry({ properties: { NAME: geo.properties.name } })}
+                    style={{
+                      default: { outline: "none" },
+                      hover: { fill: "#3B82F6", outline: "none", cursor: "pointer", transition: "all 250ms" },
+                      pressed: { fill: "#2563EB", outline: "none" },
+                    }}
+                  />
+                ))
+              }
+            </Geographies>
+          </ComposableMap>
+        </div>
       </div>
 
       {/* Top HUD */}
@@ -81,22 +99,22 @@ export default function MapPage() {
         {/* Animated Legend */}
         <div className="glass-panel px-6 py-4 flex flex-col gap-3 backdrop-blur-md bg-[#0B1224]/80 border border-[rgba(255,255,255,0.08)] rounded-xl pointer-events-auto shadow-2xl">
           <div className="text-[10px] font-bold text-slate-500 tracking-widest uppercase mb-1">Composite Risk Index</div>
-          <div className="flex items-center gap-3 cursor-pointer hover:bg-slate-800/50 p-1 rounded transition-colors">
+          <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-[#00E676] shadow-[0_0_12px_#00E676]"></div>
             <span className="text-xs font-bold text-slate-300 uppercase w-24">Low Risk</span>
             <span className="text-[10px] font-mono text-slate-500">1 - 25</span>
           </div>
-          <div className="flex items-center gap-3 cursor-pointer hover:bg-slate-800/50 p-1 rounded transition-colors">
+          <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-[#FFC107] shadow-[0_0_12px_#FFC107]"></div>
             <span className="text-xs font-bold text-slate-300 uppercase w-24">Medium</span>
             <span className="text-[10px] font-mono text-slate-500">26 - 50</span>
           </div>
-          <div className="flex items-center gap-3 cursor-pointer hover:bg-slate-800/50 p-1 rounded transition-colors">
+          <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-[#FF7043] shadow-[0_0_12px_#FF7043]"></div>
             <span className="text-xs font-bold text-slate-300 uppercase w-24">High</span>
             <span className="text-[10px] font-mono text-slate-500">51 - 75</span>
           </div>
-          <div className="flex items-center gap-3 cursor-pointer hover:bg-slate-800/50 p-1 rounded transition-colors">
+          <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-[#F44336] shadow-[0_0_12px_#F44336]"></div>
             <span className="text-xs font-bold text-slate-300 uppercase w-24">Very High</span>
             <span className="text-[10px] font-mono text-slate-500">76 - 100</span>
@@ -104,26 +122,20 @@ export default function MapPage() {
         </div>
       </div>
 
-      {/* Floating Controls (Search removed as requested) */}
       <div className="absolute bottom-8 left-8 flex flex-col gap-4 pointer-events-auto z-10">
         <div className="flex gap-2">
-          <button 
-            onClick={() => window.location.reload()}
-            className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
+          <button onClick={() => window.location.reload()} className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
             <RotateCcw className="w-5 h-5 text-slate-400 group-hover:text-white" />
           </button>
-          <button 
-            onClick={() => document.documentElement.requestFullscreen()}
-            className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
+          <button onClick={() => document.documentElement.requestFullscreen()} className="bg-[#0B1224]/80 backdrop-blur-md border border-[rgba(255,255,255,0.08)] p-3 rounded-xl hover:bg-slate-800 transition-colors group">
             <Maximize2 className="w-5 h-5 text-slate-400 group-hover:text-white" />
           </button>
         </div>
       </div>
 
-      {/* Right Slide-out Panel */}
       <CountryPanel 
-        country={clickedCountry?.properties?.ADMIN || clickedCountry?.properties?.NAME} 
-        data={data.find(d => d.country === clickedCountry?.properties?.ADMIN || d.country === clickedCountry?.properties?.NAME)} 
+        country={clickedCountry?.properties?.NAME} 
+        data={data.find(d => d.country === clickedCountry?.properties?.NAME)} 
         onClose={() => setClickedCountry(null)} 
       />
     </div>
