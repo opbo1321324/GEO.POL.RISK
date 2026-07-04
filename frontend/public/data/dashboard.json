@@ -7,61 +7,61 @@
   "top_riskiest": [
     {
       "iso": "HTI",
-      "country": "HTI",
+      "country": "Haiti",
       "risk_score": 70.24881868094712,
       "risk_level": "HIGH"
     },
     {
       "iso": "MMR",
-      "country": "MMR",
+      "country": "Myanmar",
       "risk_score": 70.11529858939377,
       "risk_level": "HIGH"
     },
     {
       "iso": "YEM",
-      "country": "YEM",
+      "country": "Yemen",
       "risk_score": 69.9071575964139,
       "risk_level": "HIGH"
     },
     {
       "iso": "MWI",
-      "country": "MWI",
+      "country": "Malawi",
       "risk_score": 65.32236368181489,
       "risk_level": "HIGH"
     },
     {
       "iso": "UKR",
-      "country": "UKR",
+      "country": "Ukraine",
       "risk_score": 65.1241997613416,
       "risk_level": "HIGH"
     },
     {
       "iso": "BOL",
-      "country": "BOL",
+      "country": "Bolivia",
       "risk_score": 64.61687082013285,
       "risk_level": "HIGH"
     },
     {
       "iso": "IRN",
-      "country": "IRN",
+      "country": "Iran",
       "risk_score": 63.201513237624866,
       "risk_level": "HIGH"
     },
     {
       "iso": "VEN",
-      "country": "VEN",
+      "country": "Venezuela",
       "risk_score": 62.831453925916634,
       "risk_level": "HIGH"
     },
     {
       "iso": "SUR",
-      "country": "SUR",
+      "country": "Suriname",
       "risk_score": 61.41482223427309,
       "risk_level": "HIGH"
     },
     {
       "iso": "MDA",
-      "country": "MDA",
+      "country": "Moldova",
       "risk_score": 61.3526950827363,
       "risk_level": "HIGH"
     }

@@ -1,559 +1,559 @@
 [
   {
     "iso_alpha3": "ABW",
-    "country": "ABW",
+    "country": "Aruba",
     "risk_score": 46.2063018711717,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "AGO",
-    "country": "AGO",
+    "country": "Angola",
     "risk_score": 60.890275457174894,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ALB",
-    "country": "ALB",
+    "country": "Albania",
     "risk_score": 48.61892353889424,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "AND",
-    "country": "AND",
+    "country": "Andorra",
     "risk_score": 45.666416081971455,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ARE",
-    "country": "ARE",
+    "country": "United Arab Emirates",
     "risk_score": 41.46569217085149,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ARG",
-    "country": "ARG",
+    "country": "Argentina",
     "risk_score": 57.262989082078946,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ARM",
-    "country": "ARM",
+    "country": "Armenia",
     "risk_score": 47.73796703294066,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ATG",
-    "country": "ATG",
+    "country": "Antigua and Barbuda",
     "risk_score": 53.601911777338145,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AUS",
-    "country": "AUS",
+    "country": "Australia",
     "risk_score": 51.509501731243724,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AUT",
-    "country": "AUT",
+    "country": "Austria",
     "risk_score": 54.271715987965976,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "AZE",
-    "country": "AZE",
+    "country": "Azerbaijan",
     "risk_score": 50.968611308344535,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BDI",
-    "country": "BDI",
+    "country": "Burundi",
     "risk_score": 58.816521978392394,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BEL",
-    "country": "BEL",
+    "country": "Belgium",
     "risk_score": 52.569822854192076,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BEN",
-    "country": "BEN",
+    "country": "Benin",
     "risk_score": 42.7850402433996,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BFA",
-    "country": "BFA",
+    "country": "Burkina Faso",
     "risk_score": 46.32890672986584,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BGD",
-    "country": "BGD",
+    "country": "Bangladesh",
     "risk_score": 55.1270353648478,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BGR",
-    "country": "BGR",
+    "country": "Bulgaria",
     "risk_score": 50.90909012344837,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BHR",
-    "country": "BHR",
+    "country": "Bahrain",
     "risk_score": 45.958718789412515,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BHS",
-    "country": "BHS",
+    "country": "Bahamas",
     "risk_score": 50.15653098292126,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BIH",
-    "country": "BIH",
+    "country": "Bosnia and Herzegovina",
     "risk_score": 52.421660041584246,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BLR",
-    "country": "BLR",
+    "country": "Belarus",
     "risk_score": 55.471461469903176,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BLZ",
-    "country": "BLZ",
+    "country": "Belize",
     "risk_score": 50.85272505078815,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BOL",
-    "country": "BOL",
+    "country": "Bolivia",
     "risk_score": 64.61687082013285,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRA",
-    "country": "BRA",
+    "country": "Brazil",
     "risk_score": 53.27868366800852,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRB",
-    "country": "BRB",
+    "country": "Barbados",
     "risk_score": 50.76440545817313,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "BRN",
-    "country": "BRN",
+    "country": "Brunei Darussalam",
     "risk_score": 44.615943124438154,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BTN",
-    "country": "BTN",
+    "country": "Bhutan",
     "risk_score": 46.45539183826124,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "BWA",
-    "country": "BWA",
+    "country": "Botswana",
     "risk_score": 58.50781144315275,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CAF",
-    "country": "CAF",
+    "country": "Central African Republic",
     "risk_score": 52.78649127378396,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CAN",
-    "country": "CAN",
+    "country": "Canada",
     "risk_score": 51.93102893777233,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CHE",
-    "country": "CHE",
+    "country": "Switzerland",
     "risk_score": 48.28520705138373,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CHL",
-    "country": "CHL",
+    "country": "Chile",
     "risk_score": 52.15224758046974,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "CHN",
-    "country": "CHN",
+    "country": "China",
     "risk_score": 42.33970998511982,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CIV",
-    "country": "CIV",
+    "country": "Côte d'Ivoire",
     "risk_score": 41.92378981816971,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CMR",
-    "country": "CMR",
+    "country": "Cameroon",
     "risk_score": 49.525250402027815,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "COD",
-    "country": "COD",
+    "country": "DR Congo",
     "risk_score": 52.07047636092512,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COG",
-    "country": "COG",
+    "country": "Congo Republic",
     "risk_score": 52.094766662526126,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COL",
-    "country": "COL",
+    "country": "Colombia",
     "risk_score": 52.73142756323362,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "COM",
-    "country": "COM",
+    "country": "Comoros",
     "risk_score": 48.878348060859956,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CPV",
-    "country": "CPV",
+    "country": "Cabo Verde",
     "risk_score": 44.23392228194869,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CRI",
-    "country": "CRI",
+    "country": "Costa Rica",
     "risk_score": 46.199671281126534,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CYP",
-    "country": "CYP",
+    "country": "Cyprus",
     "risk_score": 49.33918754008277,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "CZE",
-    "country": "CZE",
+    "country": "Czechia",
     "risk_score": 49.94407611312799,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DEU",
-    "country": "DEU",
+    "country": "Germany",
     "risk_score": 52.01209093126161,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DJI",
-    "country": "DJI",
+    "country": "Djibouti",
     "risk_score": 40.52422209551134,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DMA",
-    "country": "DMA",
+    "country": "Dominica",
     "risk_score": 52.588801549610906,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DNK",
-    "country": "DNK",
+    "country": "Denmark",
     "risk_score": 47.16420563236099,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "DOM",
-    "country": "DOM",
+    "country": "Dominican Republic",
     "risk_score": 50.810854087882575,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "DZA",
-    "country": "DZA",
+    "country": "Algeria",
     "risk_score": 50.17385325006539,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ECU",
-    "country": "ECU",
+    "country": "Ecuador",
     "risk_score": 45.71510933590576,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "EGY",
-    "country": "EGY",
+    "country": "Egypt",
     "risk_score": 58.617456268789205,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ESP",
-    "country": "ESP",
+    "country": "Spain",
     "risk_score": 48.19704505429591,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "EST",
-    "country": "EST",
+    "country": "Estonia",
     "risk_score": 56.14004337247941,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ETH",
-    "country": "ETH",
+    "country": "Ethiopia",
     "risk_score": 52.83577614166588,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FIN",
-    "country": "FIN",
+    "country": "Finland",
     "risk_score": 52.54251510098591,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FJI",
-    "country": "FJI",
+    "country": "Fiji",
     "risk_score": 48.03666438795184,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "FRA",
-    "country": "FRA",
+    "country": "France",
     "risk_score": 51.6045907185673,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "FSM",
-    "country": "FSM",
+    "country": "Micronesia, Fed. Sts.",
     "risk_score": 54.22127553367142,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GAB",
-    "country": "GAB",
+    "country": "Gabon",
     "risk_score": 49.23775336829366,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GBR",
-    "country": "GBR",
+    "country": "United Kingdom",
     "risk_score": 53.54521554104934,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GEO",
-    "country": "GEO",
+    "country": "Georgia",
     "risk_score": 44.03330302597503,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GHA",
-    "country": "GHA",
+    "country": "Ghana",
     "risk_score": 57.26315748648847,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GIN",
-    "country": "GIN",
+    "country": "Guinea",
     "risk_score": 44.572658296439386,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GMB",
-    "country": "GMB",
+    "country": "Gambia",
     "risk_score": 49.882762072159224,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GNB",
-    "country": "GNB",
+    "country": "Guinea-Bissau",
     "risk_score": 46.2007267600631,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GNQ",
-    "country": "GNQ",
+    "country": "Equatorial Guinea",
     "risk_score": 58.19679390443973,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GRC",
-    "country": "GRC",
+    "country": "Greece",
     "risk_score": 52.78119466257515,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GRD",
-    "country": "GRD",
+    "country": "Grenada",
     "risk_score": 51.16776955614243,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "GTM",
-    "country": "GTM",
+    "country": "Guatemala",
     "risk_score": 45.57963730456656,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "GUY",
-    "country": "GUY",
+    "country": "Guyana",
     "risk_score": 35.09360023263923,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HKG",
-    "country": "HKG",
+    "country": "Hong Kong",
     "risk_score": 45.85775559958234,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HND",
-    "country": "HND",
+    "country": "Honduras",
     "risk_score": 49.674019972131376,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "HRV",
-    "country": "HRV",
+    "country": "Croatia",
     "risk_score": 51.031984066309874,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "HTI",
-    "country": "HTI",
+    "country": "Haiti",
     "risk_score": 70.24881868094712,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "HUN",
-    "country": "HUN",
+    "country": "Hungary",
     "risk_score": 54.74616355089047,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "IDN",
-    "country": "IDN",
+    "country": "Indonesia",
     "risk_score": 45.19446620595919,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IND",
-    "country": "IND",
+    "country": "India",
     "risk_score": 43.03734207395492,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IRL",
-    "country": "IRL",
+    "country": "Ireland",
     "risk_score": 34.41078482635304,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "IRN",
-    "country": "IRN",
+    "country": "Iran",
     "risk_score": 63.201513237624866,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "IRQ",
-    "country": "IRQ",
+    "country": "Iraq",
     "risk_score": 52.25443426514769,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ISL",
-    "country": "ISL",
+    "country": "Iceland",
     "risk_score": 54.286650380698944,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ISR",
-    "country": "ISR",
+    "country": "Israel",
     "risk_score": 49.69332809208142,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ITA",
-    "country": "ITA",
+    "country": "Italy",
     "risk_score": 52.07388938538991,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JAM",
-    "country": "JAM",
+    "country": "Jamaica",
     "risk_score": 51.686359066433205,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JOR",
-    "country": "JOR",
+    "country": "Jordan",
     "risk_score": 50.49956506326866,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "JPN",
-    "country": "JPN",
+    "country": "Japan",
     "risk_score": 52.03323989842802,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KAZ",
-    "country": "KAZ",
+    "country": "Kazakhstan",
     "risk_score": 53.79170979800867,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KEN",
-    "country": "KEN",
+    "country": "Kenya",
     "risk_score": 47.90992267488121,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KGZ",
-    "country": "KGZ",
+    "country": "Kyrgyzstan",
     "risk_score": 47.81802859532915,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KHM",
-    "country": "KHM",
+    "country": "Cambodia",
     "risk_score": 45.50731756012354,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "KIR",
-    "country": "KIR",
+    "country": "Kiribati",
     "risk_score": 55.333873988486516,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KNA",
-    "country": "KNA",
+    "country": "St. Kitts and Nevis",
     "risk_score": 54.052188051121774,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "KOR",
-    "country": "KOR",
+    "country": "South Korea",
     "risk_score": 50.80867802590486,
     "risk_level": "HIGH"
   },
@@ -565,205 +565,205 @@
   },
   {
     "iso_alpha3": "KWT",
-    "country": "KWT",
+    "country": "Kuwait",
     "risk_score": 44.84911441057739,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LAO",
-    "country": "LAO",
+    "country": "Laos",
     "risk_score": 52.0281008928985,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LBR",
-    "country": "LBR",
+    "country": "Liberia",
     "risk_score": 56.89501835122879,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LBY",
-    "country": "LBY",
+    "country": "Libya",
     "risk_score": 32.840749173584285,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LCA",
-    "country": "LCA",
+    "country": "St. Lucia",
     "risk_score": 48.22652612443014,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LIE",
-    "country": "LIE",
+    "country": "Liechtenstein",
     "risk_score": 46.58621416790389,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LSO",
-    "country": "LSO",
+    "country": "Lesotho",
     "risk_score": 54.68937882917131,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "LTU",
-    "country": "LTU",
+    "country": "Lithuania",
     "risk_score": 49.88170632455513,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LUX",
-    "country": "LUX",
+    "country": "Luxembourg",
     "risk_score": 48.68472661094948,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "LVA",
-    "country": "LVA",
+    "country": "Latvia",
     "risk_score": 54.14841571892707,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MAC",
-    "country": "MAC",
+    "country": "Macau",
     "risk_score": 43.11407846397244,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MAR",
-    "country": "MAR",
+    "country": "Morocco",
     "risk_score": 45.67940647520405,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MDA",
-    "country": "MDA",
+    "country": "Moldova",
     "risk_score": 61.3526950827363,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MDG",
-    "country": "MDG",
+    "country": "Madagascar",
     "risk_score": 54.910564380260624,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MDV",
-    "country": "MDV",
+    "country": "Maldives",
     "risk_score": 50.326915827571,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MEX",
-    "country": "MEX",
+    "country": "Mexico",
     "risk_score": 53.89050079733835,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MHL",
-    "country": "MHL",
+    "country": "Marshall Islands",
     "risk_score": 49.749661087163076,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MKD",
-    "country": "MKD",
+    "country": "North Macedonia",
     "risk_score": 50.492741626414656,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MLI",
-    "country": "MLI",
+    "country": "Mali",
     "risk_score": 47.54166663908571,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MLT",
-    "country": "MLT",
+    "country": "Malta",
     "risk_score": 45.85199128227296,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MMR",
-    "country": "MMR",
+    "country": "Myanmar",
     "risk_score": 70.11529858939377,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MNE",
-    "country": "MNE",
+    "country": "Montenegro",
     "risk_score": 54.7665955864829,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MNG",
-    "country": "MNG",
+    "country": "Mongolia",
     "risk_score": 54.00253896625476,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MOZ",
-    "country": "MOZ",
+    "country": "Mozambique",
     "risk_score": 57.75879801867124,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MRT",
-    "country": "MRT",
+    "country": "Mauritania",
     "risk_score": 49.05446946449694,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "MUS",
-    "country": "MUS",
+    "country": "Mauritius",
     "risk_score": 51.16765635882943,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MWI",
-    "country": "MWI",
+    "country": "Malawi",
     "risk_score": 65.32236368181489,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "MYS",
-    "country": "MYS",
+    "country": "Malaysia",
     "risk_score": 44.910190040313,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NAM",
-    "country": "NAM",
+    "country": "Namibia",
     "risk_score": 52.81134295961368,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NER",
-    "country": "NER",
+    "country": "Niger",
     "risk_score": 45.01701422769551,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NGA",
-    "country": "NGA",
+    "country": "Nigeria",
     "risk_score": 56.43007741051632,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NIC",
-    "country": "NIC",
+    "country": "Nicaragua",
     "risk_score": 46.54244915590231,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NLD",
-    "country": "NLD",
+    "country": "Netherlands",
     "risk_score": 49.53811439616569,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NOR",
-    "country": "NOR",
+    "country": "Norway",
     "risk_score": 47.782670872774126,
     "risk_level": "MEDIUM"
   },
@@ -775,379 +775,379 @@
   },
   {
     "iso_alpha3": "NPL",
-    "country": "NPL",
+    "country": "Nepal",
     "risk_score": 46.42009663438446,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "NRU",
-    "country": "NRU",
+    "country": "Nauru",
     "risk_score": 53.342345762311595,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "NZL",
-    "country": "NZL",
+    "country": "New Zealand",
     "risk_score": 54.12232023055637,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "OMN",
-    "country": "OMN",
+    "country": "Oman",
     "risk_score": 47.71142420743765,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PAK",
-    "country": "PAK",
+    "country": "Pakistan",
     "risk_score": 51.314738564836034,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PAN",
-    "country": "PAN",
+    "country": "Panama",
     "risk_score": 44.76027050623571,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PER",
-    "country": "PER",
+    "country": "Peru",
     "risk_score": 47.749587681199834,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PHL",
-    "country": "PHL",
+    "country": "Philippines",
     "risk_score": 44.66320689321793,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PLW",
-    "country": "PLW",
+    "country": "Palau",
     "risk_score": 49.43196796747242,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PNG",
-    "country": "PNG",
+    "country": "Papua New Guinea",
     "risk_score": 45.34082137091523,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "POL",
-    "country": "POL",
+    "country": "Poland",
     "risk_score": 49.928842101542145,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "PRI",
-    "country": "PRI",
+    "country": "Puerto Rico",
     "risk_score": 54.95861838524211,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PRT",
-    "country": "PRT",
+    "country": "Portugal",
     "risk_score": 50.04058763233839,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "PRY",
-    "country": "PRY",
+    "country": "Paraguay",
     "risk_score": 48.715275684785226,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "QAT",
-    "country": "QAT",
+    "country": "Qatar",
     "risk_score": 43.886169173079125,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "ROU",
-    "country": "ROU",
+    "country": "Romania",
     "risk_score": 59.35330801097786,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "RUS",
-    "country": "RUS",
+    "country": "Russia",
     "risk_score": 59.18593044727232,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "RWA",
-    "country": "RWA",
+    "country": "Rwanda",
     "risk_score": 49.74646870617151,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SAU",
-    "country": "SAU",
+    "country": "Saudi Arabia",
     "risk_score": 47.20100742652334,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SDN",
-    "country": "SDN",
+    "country": "Sudan",
     "risk_score": 59.928715119337376,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SEN",
-    "country": "SEN",
+    "country": "Senegal",
     "risk_score": 45.269124521241466,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SGP",
-    "country": "SGP",
+    "country": "Singapore",
     "risk_score": 44.19169543128504,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SLB",
-    "country": "SLB",
+    "country": "Solomon Islands",
     "risk_score": 51.5139132244668,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SLE",
-    "country": "SLE",
+    "country": "Sierra Leone",
     "risk_score": 54.296386535325254,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SLV",
-    "country": "SLV",
+    "country": "El Salvador",
     "risk_score": 47.72361938786499,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SMR",
-    "country": "SMR",
+    "country": "San Marino",
     "risk_score": 47.46946695602017,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SOM",
-    "country": "SOM",
+    "country": "Somalia",
     "risk_score": 52.4244577229763,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SRB",
-    "country": "SRB",
+    "country": "Serbia",
     "risk_score": 53.398927053770144,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SSD",
-    "country": "SSD",
+    "country": "South Sudan",
     "risk_score": 45.43284208903233,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "STP",
-    "country": "STP",
+    "country": "Sao Tome and Principe",
     "risk_score": 57.137572464302345,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SUR",
-    "country": "SUR",
+    "country": "Suriname",
     "risk_score": 61.41482223427309,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SVK",
-    "country": "SVK",
+    "country": "Slovakia",
     "risk_score": 55.01272576704529,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SVN",
-    "country": "SVN",
+    "country": "Slovenia",
     "risk_score": 51.44004214481237,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SWE",
-    "country": "SWE",
+    "country": "Sweden",
     "risk_score": 51.115376648294315,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "SWZ",
-    "country": "SWZ",
+    "country": "Eswatini",
     "risk_score": 47.89779096842461,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "SYC",
-    "country": "SYC",
+    "country": "Seychelles",
     "risk_score": 46.89632177205521,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TCD",
-    "country": "TCD",
+    "country": "Chad",
     "risk_score": 50.35717774123965,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TGO",
-    "country": "TGO",
+    "country": "Togo",
     "risk_score": 45.38589403251743,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "THA",
-    "country": "THA",
+    "country": "Thailand",
     "risk_score": 47.81970772536487,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TJK",
-    "country": "TJK",
+    "country": "Tajikistan",
     "risk_score": 41.418799679646504,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TKM",
-    "country": "TKM",
+    "country": "Turkmenistan",
     "risk_score": 50.86325524964289,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TLS",
-    "country": "TLS",
+    "country": "Timor-Leste",
     "risk_score": 51.20659845781611,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TON",
-    "country": "TON",
+    "country": "Tonga",
     "risk_score": 51.13658257224994,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TTO",
-    "country": "TTO",
+    "country": "Trinidad and Tobago",
     "risk_score": 50.02078437174444,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUN",
-    "country": "TUN",
+    "country": "Tunisia",
     "risk_score": 54.05627315309986,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUR",
-    "country": "TUR",
+    "country": "Türkiye",
     "risk_score": 59.0359063354703,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "TUV",
-    "country": "TUV",
+    "country": "Tuvalu",
     "risk_score": 44.40568071540279,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TWN",
-    "country": "TWN",
+    "country": "Taiwan",
     "risk_score": 43.331300690635665,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "TZA",
-    "country": "TZA",
+    "country": "Tanzania",
     "risk_score": 45.06951965357376,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "UGA",
-    "country": "UGA",
+    "country": "Uganda",
     "risk_score": 45.482241232804974,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "UKR",
-    "country": "UKR",
+    "country": "Ukraine",
     "risk_score": 65.1241997613416,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "URY",
-    "country": "URY",
+    "country": "Uruguay",
     "risk_score": 52.34752277577678,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "USA",
-    "country": "USA",
+    "country": "United States",
     "risk_score": 51.83608025680405,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "UZB",
-    "country": "UZB",
+    "country": "Uzbekistan",
     "risk_score": 49.506186032045484,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "VCT",
-    "country": "VCT",
+    "country": "St. Vincent and the Grenadines",
     "risk_score": 50.03646200706777,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "VEN",
-    "country": "VEN",
+    "country": "Venezuela",
     "risk_score": 62.831453925916634,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "VNM",
-    "country": "VNM",
+    "country": "Vietnam",
     "risk_score": 42.652740484140104,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "VUT",
-    "country": "VUT",
+    "country": "Vanuatu",
     "risk_score": 53.428697868319425,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "WSM",
-    "country": "WSM",
+    "country": "Samoa",
     "risk_score": 47.540650996182194,
     "risk_level": "MEDIUM"
   },
   {
     "iso_alpha3": "YEM",
-    "country": "YEM",
+    "country": "Yemen",
     "risk_score": 69.9071575964139,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZAF",
-    "country": "ZAF",
+    "country": "South Africa",
     "risk_score": 53.21557793972523,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZMB",
-    "country": "ZMB",
+    "country": "Zambia",
     "risk_score": 54.20082494707799,
     "risk_level": "HIGH"
   },
   {
     "iso_alpha3": "ZWE",
-    "country": "ZWE",
+    "country": "Zimbabwe",
     "risk_score": 53.38186442117292,
     "risk_level": "HIGH"
   }
