@@ -1,0 +1,116 @@
+{
+  "kpis": {
+    "countries_covered": 193,
+    "avg_risk": 49.489041122680185,
+    "high_risk_count": 95,
+    "avg_inflation": 3.646217616580311
+  },
+  "top_riskiest": [
+    {
+      "iso": "JPN",
+      "country": "Japan",
+      "risk_score": 62.65141907866967,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "BWA",
+      "country": "Botswana",
+      "risk_score": 61.443913824265564,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "SOM",
+      "country": "Somalia",
+      "risk_score": 60.563874213591475,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "BOL",
+      "country": "Bolivia",
+      "risk_score": 60.17819014023849,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "SWZ",
+      "country": "Eswatini",
+      "risk_score": 58.55585201991427,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "GUY",
+      "country": "Guyana",
+      "risk_score": 58.504605753057035,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "DEU",
+      "country": "Germany",
+      "risk_score": 58.27671637453882,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "BLR",
+      "country": "Belarus",
+      "risk_score": 58.167424785175385,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "ARG",
+      "country": "Argentina",
+      "risk_score": 57.939067152936545,
+      "risk_level": "HIGH"
+    },
+    {
+      "iso": "BFA",
+      "country": "Burkina Faso",
+      "risk_score": 57.91342401062226,
+      "risk_level": "HIGH"
+    }
+  ],
+  "trend": [
+    {
+      "year": 2016,
+      "risk_score": 49.210672572513054
+    },
+    {
+      "year": 2017,
+      "risk_score": 49.204558383439505
+    },
+    {
+      "year": 2018,
+      "risk_score": 49.15339747962009
+    },
+    {
+      "year": 2019,
+      "risk_score": 49.40013475751561
+    },
+    {
+      "year": 2020,
+      "risk_score": 59.39145319800077
+    },
+    {
+      "year": 2021,
+      "risk_score": 46.05110844226833
+    },
+    {
+      "year": 2022,
+      "risk_score": 53.937135111988376
+    },
+    {
+      "year": 2023,
+      "risk_score": 49.11119500427403
+    },
+    {
+      "year": 2024,
+      "risk_score": 49.23097112943671
+    },
+    {
+      "year": 2025,
+      "risk_score": 49.52084400378959
+    },
+    {
+      "year": 2026,
+      "risk_score": 49.489041122680185
+    }
+  ]
+}

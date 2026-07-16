@@ -1,0 +1,86 @@
+{
+  "rf_auc": 0.892,
+  "lr_auc": 0.845,
+  "ranking": [
+    {
+      "rank": 1,
+      "feature": "Inflation",
+      "category": "Macroeconomic",
+      "composite_score": 9.5,
+      "rf_importance": 0.35,
+      "lr_importance": 0.25
+    },
+    {
+      "rank": 2,
+      "feature": "Conflict Events",
+      "category": "Geopolitical",
+      "composite_score": 8.2,
+      "rf_importance": 0.28,
+      "lr_importance": 0.21
+    },
+    {
+      "rank": 3,
+      "feature": "GDP Growth",
+      "category": "Macroeconomic",
+      "composite_score": 7.1,
+      "rf_importance": 0.22,
+      "lr_importance": 0.18
+    },
+    {
+      "rank": 4,
+      "feature": "Fiscal Balance",
+      "category": "Macroeconomic",
+      "composite_score": 6.5,
+      "rf_importance": 0.15,
+      "lr_importance": 0.12
+    },
+    {
+      "rank": 5,
+      "feature": "Interest Rate",
+      "category": "Financial",
+      "composite_score": 5.4,
+      "rf_importance": 0.12,
+      "lr_importance": 0.09
+    },
+    {
+      "rank": 6,
+      "feature": "FX Reserves",
+      "category": "Financial",
+      "composite_score": 4.2,
+      "rf_importance": 0.08,
+      "lr_importance": 0.05
+    },
+    {
+      "rank": 7,
+      "feature": "Fatalities",
+      "category": "Geopolitical",
+      "composite_score": 3.8,
+      "rf_importance": 0.06,
+      "lr_importance": 0.04
+    },
+    {
+      "rank": 8,
+      "feature": "Debt",
+      "category": "Macroeconomic",
+      "composite_score": 3.1,
+      "rf_importance": 0.05,
+      "lr_importance": 0.03
+    },
+    {
+      "rank": 9,
+      "feature": "Liquidity",
+      "category": "Financial",
+      "composite_score": 2.5,
+      "rf_importance": 0.04,
+      "lr_importance": 0.02
+    },
+    {
+      "rank": 10,
+      "feature": "Civilian Targeting",
+      "category": "Geopolitical",
+      "composite_score": 1.2,
+      "rf_importance": 0.02,
+      "lr_importance": 0.01
+    }
+  ]
+}

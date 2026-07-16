@@ -1,0 +1,40 @@
+{
+  "missing_iso": 0,
+  "total_records": 61415,
+  "unique_indicators": [
+    "GDP_Growth",
+    "Inflation_Pct",
+    "Central_Bank_Policy_Rate",
+    "FX_Reserves",
+    "Imports_Volume",
+    "Exports_Volume",
+    "General_Govt_Net_Lending",
+    "Unemployment_Rate",
+    "Govt_Gross_Debt",
+    "Current_Account_Pct",
+    "FDI_Inflow",
+    "Consumer_Confidence",
+    "Manufacturing_PMI",
+    "Industrial_Production",
+    "Retail_Sales",
+    "10Y_Bond_Yield",
+    "M2_Growth",
+    "Household_Debt",
+    "Corporate_Tax",
+    "Personal_Tax",
+    "Labor_Force_Participation",
+    "Gini_Index",
+    "Ease_of_Doing_Business",
+    "Carbon_Intensity",
+    "RnD_Expenditure",
+    "Gross_National_Savings",
+    "External_Debt",
+    "Conflict_Events",
+    "Fatalities"
+  ],
+  "years_covered": [
+    2016,
+    2026
+  ],
+  "value_warnings": []
+}
