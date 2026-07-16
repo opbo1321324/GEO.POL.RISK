@@ -1,33 +1,40 @@
 {
   "missing_iso": 0,
-  "total_records": 36871,
+  "total_records": 61415,
   "unique_indicators": [
     "GDP_Growth",
-    "Nominal_GDP",
-    "GDP_Deflator",
-    "GDP_per_Capita",
-    "Inflation_Avg",
     "Inflation_Pct",
+    "Central_Bank_Policy_Rate",
+    "FX_Reserves",
+    "Imports_Volume",
+    "Exports_Volume",
+    "General_Govt_Net_Lending",
     "Unemployment_Rate",
-    "Population",
-    "Govt_Revenue",
-    "Govt_Expenditure",
-    "Govt_Net_Lending",
     "Govt_Gross_Debt",
-    "Gross_National_Savings",
-    "Imports",
-    "Exports",
-    "Primary_Balance",
-    "Current_Account_USD",
     "Current_Account_Pct",
+    "FDI_Inflow",
+    "Consumer_Confidence",
+    "Manufacturing_PMI",
+    "Industrial_Production",
+    "Retail_Sales",
+    "10Y_Bond_Yield",
+    "M2_Growth",
+    "Household_Debt",
+    "Corporate_Tax",
+    "Personal_Tax",
+    "Labor_Force_Participation",
+    "Gini_Index",
+    "Ease_of_Doing_Business",
+    "Carbon_Intensity",
+    "RnD_Expenditure",
+    "Gross_National_Savings",
+    "External_Debt",
     "Conflict_Events",
     "Fatalities"
   ],
   "years_covered": [
-    2015,
-    2025
+    2016,
+    2026
   ],
-  "value_warnings": [
-    "Suspicious GDP Growth values found: 9 instances outside -30% to +30%."
-  ]
+  "value_warnings": []
 }
